@@ -1,8 +1,7 @@
 local rpdmhints = {
 "Press F1 for a list of commands",
-"You are currently playing LmaoLlama Basewars",
+"You are currently playing [RGaming] Basewars",
 "say /buyturret to buy a sentry gun for $300",
-"Remember to join the LmaoLlama Steam group and donate. Located at: http://steamcommunity.com/groups/LmaoLlama",
 "Shooting every person randomly on this server usually ends with everyone teaming up against you.",
 "RDM'ing is againist the rules! You will get a warning then you will be banned.",
 "If you have a base set up and you hear beeping and can see 'BOMB' right outside of your base, then you should probably go and defuse it.",
