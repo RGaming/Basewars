@@ -63,7 +63,7 @@ div.WordSection1
 
 <p class=MsoNormal align=center style='margin-top:0in;margin-right:.3in;
 margin-bottom:10.0pt;margin-left:.1in;text-align:center;line-height:normal'><b><u><span
-style='font-size:16.0pt;font-family:"Courier New";color:#C9C9C9'>LmaoLlama Base Wars Help</span></u></b></p>
+style='font-size:16.0pt;font-family:"Courier New";color:#C9C9C9'>RGaming Base Wars Help</span></u></b></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:12.0pt;
 margin-left:.1in;line-height:normal'><b><u><span style='font-size:16.0pt;
@@ -76,28 +76,28 @@ Spawn Menu</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><span
-style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'>LmaoLlama Base Wars has
+style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'>RGaming Base Wars has
 two menus.</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><span
 style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'>'Q' -&gt; Left
-Side -&gt; LmaoLlama Base Wars (Referred to as LmaoLlama Base Wars Spawn Menu)</span></p>
+Side -&gt; RGaming Base Wars (Referred to as RGaming Base Wars Spawn Menu)</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><span
 style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'>'Q' -&gt;
-Right Side -&gt; LmaoLlama Base Wars (Referred to as LmaoLlama Base Wars Options Menu)</span></p>
+Right Side -&gt; RGaming Base Wars (Referred to as RGaming Base Wars Options Menu)</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><span
-style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'>The LmaoLlama Base Wars
+style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'>The RGaming Base Wars
 Spawn Menu allows you to spawn items without typing chat commands. Price and
 Name are shown when you hover over them.</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><span
-style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'>The LmaoLlama Base Wars
+style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'>The RGaming Base Wars
 Options Menu allows you to change settings of your HUD, Crosshairs, Allies, and
 Prop Protect.<br>
 <br>
@@ -132,7 +132,7 @@ Send a message to Mayor and cops<br>
 Write a letter, press use on a letter to read it<br>
 &nbsp;&nbsp;-each version of this command uses a different font<br>
 <b>/sign</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--
-Create a sign. Color is same as your color in LmaoLlama Base Wars Effects Settings !!!ADMIN ONLY!!!<br>
+Create a sign. Color is same as your color in RGaming Base Wars Effects Settings !!!ADMIN ONLY!!!<br>
 <b>/buyticket</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--
 Buy a lottery ticket<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--
@@ -142,7 +142,7 @@ to allies
 only.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp; <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Your team is considered people who you have allied or "bw_factionmenu" group in the LmaoLlama Base Wars Settings Menu.</span></p>
+Your team is considered people who you have allied or "bw_factionmenu" group in the RGaming Base Wars Settings Menu.</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:12.0pt;
 margin-left:.1in;line-height:normal'><span style='font-size:10.0pt;font-family:
@@ -400,7 +400,7 @@ kicked.<br>
 &nbsp; -Sentry gun will spawn where you look, even if its a wall or ceiling.<br>
 &nbsp; -To make it not shoot someone, both you and that person must check each
 others name<br>
-&nbsp; -Ally menu can be found in Options-&gt;LmaoLlama Base Wars-&gt;Allies in your spawn
+&nbsp; -Ally menu can be found in Options-&gt;RGaming Base Wars-&gt;Allies in your spawn
 menu ('Q' menu)<br>
 &nbsp; -Sentry gun <b>CANNOT BE MOVED ONCE SPAWNED</b></span></p>
 
@@ -611,7 +611,6 @@ RULES[1] =	{
 				"10. Be tolerant of different players, refrain from using hate and/or racist language.",
 				"11. Our servers are usually very busy; do not leave your computer unattended for long periods of time while in-game.",
 				"12. The admins are here to help you, obey them at all times.",
-				"13. We always welcome new players, get involved with our community at www.LmaoLlama.com"
 			}
 RULES[2] =	{
 				"Player Trapping",
@@ -722,12 +721,11 @@ RULES[15] =  {
 
 local ABOUT = {}
 ABOUT[1] =	{
-				"About LmaoLlama Base Wars",
+				"About RGaming Base Wars",
 				"",
-				"Created in late 2010 LmaoLlama Base Wars from a leaked bullshit version WCA Combat that was shit coded, LmaoLlama Base Wars is a base wars gamemode.",
+				"RGaming Base Wars is adapted from a LmaoLlama BaseWars leak, the shit-code saga continues",
 				"This is base wars.",
 				"",
-				"You can visit the LmaoLlama forums at http://www.LmaoLlama.com"
 			}
 ABOUT[2] =	{
 				"Credits",
@@ -793,7 +791,7 @@ function DermaHelp()
   
 	DermaPanel:SetPos(((ScrW() - 750) * 0.5),((ScrH() - 600) * 0.5))
 	DermaPanel:SetSize(750, 600)
-	DermaPanel:SetTitle("LmaoLlama BaseWars")
+	DermaPanel:SetTitle("RGaming BaseWars")
 	DermaPanel:SetVisible(true) 
 	DermaPanel:SetDraggable(false)
 	DermaPanel:ShowCloseButton(true)

@@ -691,14 +691,14 @@ end
 AddChatCommand( "/buyspawnpoint", BuySpawn );
 
 function AllyTurret(ply, args)
-	Notify( ply, 1, 3, "Use the LmaoLlamaBaseWarsV2 Allies menu instead of this")
+	Notify( ply, 1, 3, "Use the RGaming BaseWars Allies menu instead of this")
 	return "";
 end
 //AddChatCommand( "/setally", AllyTurret );
 //AddChatCommand( "/addally", AllyTurret );
 
 function UnAllyTurret(ply, args)
-	Notify( ply, 1, 3, "Use the LmaoLlamaBaseWarsV2 Allies menu instead of this")
+	Notify( ply, 1, 3, "Use the RGaming BaseWars Allies menu instead of this")
 	return""
 end
 AddChatCommand( "/clearally", UnAllyTurret );
@@ -706,7 +706,7 @@ AddChatCommand( "/clearally", UnAllyTurret );
 //AddChatCommand( "/unsetally", UnAllyTurret );
 
 function JobAllyTurret(ply, args)
-	Notify( ply, 1, 3, "Use the LmaoLlamaBaseWarsV2 Allies menu instead of this")
+	Notify( ply, 1, 3, "Use the RGaming BaseWars Allies menu instead of this")
 	return""
 end
 //AddChatCommand( "/setjobally", JobAllyTurret );
