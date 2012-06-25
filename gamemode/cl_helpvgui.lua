@@ -160,65 +160,65 @@ style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'><br>
 color:#C9C9C9'><br>
 Command&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price&nbsp;&nbsp;&nbsp;&nbsp;Ammo&nbsp;type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description<br>
 <br>
-<b>/buyknife</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">150&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Buy
+<b>/buyknife</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;150&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Buy
 a knife<br>
-<b>/buypipebomb</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">150&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Buy
+<b>/buypipebomb</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;150&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Buy
 3 pipe bombs<br>
-<b>/buylockpick</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">150&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unlocks
+<b>/buylockpick</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;150&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unlocks
 doors you don't own, breaks into gunvaults, pillboxs and keypads.<br>
-<b>/buybinoculars</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">150&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>/buybinoculars</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;150&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;Buy a pair of binoculars to look around with<br>
-<b>/buydartgun</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">300&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;dart&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stuns
+<b>/buydartgun</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;300&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;dart&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stuns
 players that are hit with it<br>
-<b>/buywelder</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">750&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deletes
+<b>/buywelder</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;750&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deletes
 other peoples props<br>
 &nbsp; -Blocking yourself in order to weld into their base so that they cannot
 kill you can get you banned. Don't do it.<br>
 <br>
 <b>/buypistol</b>&nbsp;(followed&nbsp;by&nbsp;any&nbsp;of&nbsp;the&nbsp;below,&nbsp;ALL&nbsp;use&nbsp;pistol&nbsp;ammo)<br>
-P228&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">200<br>
-Deagle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">210<br>
-Glock&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">220<br>
-Fiveseven&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">230<br>
-USP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">240<br>
-Elites&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">350<br>
-Mac10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">420<br>
-TMP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">530<br>
-AutoFiveseven&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">1380<br>
-AutoGlock&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">1320<br>
+P228&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200<br>
+Deagle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;210<br>
+Glock&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;220<br>
+Fiveseven&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;230<br>
+USP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;240<br>
+Elites&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;350<br>
+Mac10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;420<br>
+TMP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;530<br>
+AutoFiveseven&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1380<br>
+AutoGlock&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1320<br>
 <br>
 <b>/buyshipment</b>&nbsp;(followed&nbsp;by&nbsp;any&nbsp;of&nbsp;the&nbsp;below.)<br>
 &nbsp; -if there are gun dealers, price is doubled.<br>
 <br>
-Mac10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">1100&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;pistol<br>
-TMP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">1200&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;pistol<br>
-UMP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">1300&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;pistol<br>
+Mac10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1100&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;pistol<br>
+TMP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1200&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;pistol<br>
+UMP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1300&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;pistol<br>
 P90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">1300&nbsp;&nbsp;&nbsp; ammo: pistol<br>
-m4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">1400&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;rifle<br>
-Shotgun&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">1500&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;shotgun<br>
-MP5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">1600&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;pistol<br>
-Galil&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">1700&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;rifle<br>
-AUG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">1800&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;rifle<br>
-AK47&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">2000&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;rifle<br>
-FlameThrower&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">2100&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;fuel<br>
-Sniper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">2200&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;sniper<br>
-AutoShotgun&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">2400&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;shotgun<br>
-M249&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">2800&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;rifle
+1300&nbsp;&nbsp;&nbsp; ammo: pistol<br>
+m4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1400&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;rifle<br>
+Shotgun&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1500&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;shotgun<br>
+MP5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1600&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;pistol<br>
+Galil&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1700&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;rifle<br>
+AUG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1800&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;rifle<br>
+AK47&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2000&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;rifle<br>
+FlameThrower&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2100&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;fuel<br>
+Sniper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2200&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;sniper<br>
+AutoShotgun&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2400&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;shotgun<br>
+M249&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2800&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;rifle
 AutoSnipe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3500&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp;sniper<br>
-Grenade&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">300&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Grenade&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;300&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <br>
-StunGrenade&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">250&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+StunGrenade&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;250&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <br>
-GasGrenade&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<br>
-Molotov&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<br>
+GasGrenade&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<br>
+Molotov&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<br>
 Incendiary&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">900&nbsp;&nbsp;&nbsp;&nbsp; -</span></p>
+900&nbsp;&nbsp;&nbsp;&nbsp; -</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:10.0pt;
 margin-left:.1in;line-height:normal'><b><span style='font-size:10.0pt;
 font-family:"Courier New";color:#C9C9C9'>/buybomb</span></b><span
-style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">15000&nbsp;&nbsp;&nbsp;&nbsp;Not&nbsp;handheld&nbsp;&nbsp;&nbsp;Destroys
+style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15000&nbsp;&nbsp;&nbsp;&nbsp;Not&nbsp;handheld&nbsp;&nbsp;&nbsp;Destroys
 everything near it<br>
 &nbsp; -Hold use on the bomb to arm it. Bomb explodes after 120 seconds unless
 defused.<br>
@@ -238,18 +238,18 @@ color:#C9C9C9'>Gunfactory Items</span></u></b><span style='font-size:10.0pt;
 font-family:"Courier New";color:#C9C9C9'><br>
 <br>
 Laser
-Gun&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">300&nbsp;&nbsp;&nbsp;&nbsp;<br>
+Gun&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;300&nbsp;&nbsp;&nbsp;&nbsp;<br>
 Laser Rifle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">600&nbsp;&nbsp;&nbsp;&nbsp;<br>
+600&nbsp;&nbsp;&nbsp;&nbsp;<br>
 Plasma
 Gun&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">600<br>
-RPG Launcher&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">800
+600<br>
+RPG Launcher&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 800
 &nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp; /buyammo rocket <br>
 Grenade Launcher&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">1000&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp; /buyammo grenade<br>
+1000&nbsp;&nbsp;&nbsp;&nbsp;ammo:&nbsp; /buyammo grenade<br>
 Worldslayer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">1400&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+1400&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:10.0pt;
 margin-left:.1in;line-height:normal'><span style='font-size:10.0pt;font-family:
@@ -262,7 +262,7 @@ font-family:"Courier New";color:#C9C9C9'>Structures</span></u></b></p>
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><b><span
 style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'>/buygenerator</span></b><span
-style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provides
+style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provides
 up to 5 power to structures near it<br>
 &nbsp; -Generator automatically powers structures near it upon buying it<br>
 &nbsp; -Costs the owner of it $5 per minute to run.</span></p>
@@ -270,7 +270,7 @@ up to 5 power to structures near it<br>
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><span
 style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'><br>
-<b>/buyradar</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">500&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Allows
+<b>/buyradar</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;500&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Allows
 the owner to use <b>/scan</b> on players to find them<br>
 &nbsp; -Requires 2 power to scan or charge<br>
 &nbsp; -Requires 1 charge to do a scan. Charges are generated each minute,
@@ -287,7 +287,7 @@ were warned.<br>
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><span
 style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'><br>
-<b>/buyspawnpoint</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">150&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets
+<b>/buyspawnpoint</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;150&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets
 where you will spawn to your location<br>
 &nbsp; -Covering it with a prop is the same as asking to be spawn camped<br>
 &nbsp; -Buying another spawn point will destroy the original</span></p>
@@ -295,7 +295,7 @@ where you will spawn to your location<br>
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><span
 style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'><br>
-<b>/buydispenser</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Press
+<b>/buydispenser</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Press
 use on it to get health and ammo<br>
 &nbsp; -Upgrade1 makes it give ammo faster<br>
 &nbsp; -Upgrade2 makes it also give armor</span></p>
@@ -303,7 +303,7 @@ use on it to get health and ammo<br>
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><span
 style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'><br>
-<b>/buycabinet</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Press
+<b>/buycabinet</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Press
 use on it to get helmet and shields<br>
 &nbsp; -Upgrade1 makes it give toolkits and scanners<br>
 &nbsp; -Upgrade2 makes it give lockpicks and binoculars as well</span></p>
@@ -311,7 +311,7 @@ use on it to get helmet and shields<br>
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><span
 style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'><br>
-<b>/buyrefinery</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">500&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Drop
+<b>/buyrefinery</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;500&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Drop
 drugs into the refinery to make better drugs<br>
 &nbsp; -Requires 2 power to take in materials<br>
 &nbsp; -Upgrade1 allows it to produce randomdrugs out of less materials<br>
@@ -326,13 +326,13 @@ randomdrugs</span></p>
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><span
 style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'><br>
-<b>/buygunlab</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">600&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Press
+<b>/buygunlab</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;600&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Press
 use on it to upgrade the gun you're holding</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><span
 style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'><br>
-<b>/buygunfactory</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">2000&nbsp;&nbsp;&nbsp;&nbsp;Creates
+<b>/buygunfactory</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2000&nbsp;&nbsp;&nbsp;&nbsp;Creates
 weapons that cannot normally be purchased<br>
 &nbsp; -Requires 3 power to make weapons<br>
 &nbsp; -Upgrades allow it to produce more types of weapons<br>
@@ -342,43 +342,43 @@ production. </span></p>
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><span
 style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'><br>
-<b>/buymicrowave</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Press
+<b>/buymicrowave</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Press
 use to make food, which gives up to 125% health<br>
 &nbsp; -Requires 1 power to make food</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><span
 style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'><br>
-<b>/buygunvault</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">300&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Drop
+<b>/buygunvault</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;300&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Drop
 guns into it to store them</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><span
 style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'><br>
-<b>/buyairboat</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Buys
+<b>/buyairboat</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Buys
 you an airboat</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><span
 style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'><br>
-<b>/buypillbox</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">300&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Drop
+<b>/buypillbox</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;300&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Drop
 items into it to store them<br>
 &nbsp; -Pill box can store nearly anything. health, drugs, booze, armor, etc.<br>
 <br>
-<b>/buyplant #</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Automatically
+<b>/buyplant #</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Automatically
 makes you $5 every minute<br>
 &nbsp; -Upon buying a plant, there is a chance that it will be hemp, making $1
 a minute instead<br>
 <br>
-<b>/buystill #</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">250&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Automatically
+<b>/buystill #</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;250&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Automatically
 makes you $10 every minute<br>
 &nbsp; -produces 'booze' item after 20 seconds<br>
 <br>
-<b>/buydruglab #</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">600&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Automatically
+<b>/buydruglab #</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;600&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Automatically
 makes you $25 every minute<br>
 &nbsp; -produces 'drug' item after 20 seconds<br>
 <br>
-<b>/buymethlab #&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">600&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Automatically
+<b>/buymethlab #&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>600&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Automatically
 makes you $50 every minute<br>
 &nbsp; -produces 'randomdrug' item after 60 seconds<br>
 &nbsp; -Every minute, a methlab has a 5% chance of randomly blowing up. Buy at
@@ -390,7 +390,7 @@ what you are looking at.<br>
 &nbsp; -First upgrade costs the same as the object, second costs double.<br>
 &nbsp; -All of the money making structures make more money with upgrades<br>
 <br>
-<b>/buyturret</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">300&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Buys
+<b>/buyturret</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;300&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Buys
 a sentry gun. Hold use on it to build it.<br>
 &nbsp; -Turret by default will shoot at any player who isn't you once its built<br>
 &nbsp; -If you don't hold use on it to build it, it will not do anything.<br>
@@ -412,15 +412,15 @@ style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'>&nbsp;</span></
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><b><span
 style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'>/buygunrecycler</span></b><span
 style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'>&nbsp;&nbsp;&nbsp;
-<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">300&nbsp;     Buys a gun recycler that gives you half of the value back of
+300&nbsp;     Buys a gun recycler that gives you half of the value back of
 inserted guns.</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><span
 style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'><br>
 <b>/buylamp </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">300&nbsp;     Buys a lamp to light up dark bases.<br>
-<b>/buyspotlight</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">300&nbsp;     Buys a spotlight
+300&nbsp;     Buys a lamp to light up dark bases.<br>
+<b>/buyspotlight</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 300&nbsp;     Buys a spotlight
 to light up dark bases.</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
@@ -452,54 +452,54 @@ margin-left:.1in;line-height:normal'><span style='font-size:10.0pt;font-family:
 "Courier New";color:#C9C9C9'><br>
 <b><u>Defense drugs<br>
 </u></b><br>
-<b>/buydrug regen</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">600&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;120
+<b>/buydrug regen</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;600&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;120
 seconds&nbsp;&nbsp;Heals health and armor over time<br>
-<b>/buydrug painkillers</b>&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">500&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;140
+<b>/buydrug painkillers</b>&nbsp;500&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;140
 seconds&nbsp;&nbsp;You take 1/3rd less damage<br>
-<b>/buydrug reflect</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">625&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;110
+<b>/buydrug reflect</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;625&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;110
 seconds&nbsp;&nbsp;1/3rd of damage you take hurts the attacker<br>
 &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&nbsp;&nbsp;&nbsp;	-Does not work with knife, gas grenades, or poison darts<br>
-<b>/buydrug antidote</b>&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;150
+<b>/buydrug antidote</b>&nbsp;&nbsp;&nbsp;&nbsp;400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;150
 seconds&nbsp;&nbsp;Poison and stun effects go away faster<br>
-<b>/buydrug adrenaline&nbsp;&nbsp;</b><IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;150
+<b>/buydrug adrenaline&nbsp;&nbsp;</b>400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;150
 seconds&nbsp;&nbsp;Sets your max health to 150%<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -unlike other items that give more than 100% health, this becomes your
 default health<br>
 <br>
 <b><u>Offense drugs<br>
 </u></b><br>
-<b>/buydrug steroids</b>&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;140
+<b>/buydrug steroids</b>&nbsp;&nbsp;&nbsp;&nbsp;400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;140
 seconds&nbsp;&nbsp;You run faster<br>
-<b>/buydrug amp</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">600&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;120
+<b>/buydrug amp</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;600&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;120
 seconds&nbsp;&nbsp;You do 50% more damage<br>
-<b>/buydrug doublejump&nbsp;&nbsp;</b><IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;130
+<b>/buydrug doublejump&nbsp;&nbsp;</b>400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;130
 seconds&nbsp;&nbsp;Allows you to do a second jump while in mid-air<br>
-<b>/buydrug leech&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;140
+<b>/buydrug leech&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;140
 seconds&nbsp;&nbsp;You absorb 1/3rd of the damage you do to players<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -Does not work with knife, gas grenades, or poison darts<br>
-<b>/buyarmorpiercer</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;110
+<b>/buyarmorpiercer</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;110
 seconds&nbsp;&nbsp;You do 25% more damage to structures<br>
 <br>
 <b><u>Weapon modifying drugs<br>
 </u></b><br>
-<b>/buydrug focus</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;120
+<b>/buydrug focus</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;120
 seconds&nbsp;&nbsp;Increased accuracy on weapons<br>
 &nbsp; -Does not work with grenade launcher, or rocket launcher<br>
 &nbsp; -Causes all weapons that shoots bullets to have a lower spread and
 lowered recoil<br>
-<b>/buydryg magicbullet</b>&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">300&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;110
+<b>/buydryg magicbullet</b>&nbsp;300&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;110
 seconds&nbsp;&nbsp;Makes 50% of your shots hit a second player<br>
 &nbsp; -This will not work with shotguns and weapons that don't fire bullets<br>
 &nbsp; -The second person hit will take half the damage it did to the first
 player<br>
 &nbsp; -Magic bullet will only work with bullets that actually hit a player<br>
-<b>/buydrug shockwave</b>&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">600&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;130
+<b>/buydrug shockwave</b>&nbsp;&nbsp;&nbsp;600&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;130
 seconds&nbsp;&nbsp;You fire explosive bullets<br>
 &nbsp; -Damage radius depends on the weapon<br>
 &nbsp; -This will have no effect with weapons that don't fire bullets<br>
-<b>/buydrug doubletap</b>&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">750&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;120
+<b>/buydrug doubletap</b>&nbsp;&nbsp;&nbsp;750&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;120
 seconds&nbsp;&nbsp;All of your weapons fire 35% faster<br>
-<b>/buydrug knockback</b>&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;110
+<b>/buydrug knockback</b>&nbsp;&nbsp;&nbsp;400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;110
 seconds&nbsp;&nbsp;1/3rd of your shots will knock players back </span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:10.0pt;
@@ -511,23 +511,23 @@ margin-left:.1in;line-height:normal'><b><u><span style='font-size:16.0pt;
 font-family:"Courier New";color:#C9C9C9'>Equipment</span></u></b><span
 style='font-size:16.0pt;font-family:"Courier New";color:#C9C9C9'><br>
 </span><span style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'><br>
-<b>/buyhealth</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">???&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Refills
+<b>/buyhealth</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;???&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Refills
 health.<br>
 &nbsp; -Price is $50 if there are no pharmacists, $250 if there are
 pharmacists.<br>
 &nbsp; -Can only be picked up 3 seconds after it spawned<br>
-<b>/buyarmor</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provides
+<b>/buyarmor</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provides
 100 armor<br>
-<b>/buyhelmet</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Makes
+<b>/buyhelmet</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Makes
 headshots do 20% the damage of a body shot<br>
-<b>/buyshield</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Survive
+<b>/buyshield</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Survive
 next damage that would kill you<br>
 &nbsp; -as cheap as this is, its probably a good idea to buy it the second you
 spawn<br>
 &nbsp; -if you have this equipped, you CANNOT die from a single hit<br>
-<b>/buyscanner</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shows
+<b>/buyscanner</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shows
 enemy health, armor, and weapon information<br>
-<b>/buytoolkit</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pick
+<b>/buytoolkit</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pick
 locks and defuse bombs faster<br>
 &nbsp; -also lets you use lockpick on keypads</span></p>
 
