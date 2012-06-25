@@ -1,0 +1,25 @@
+"Gamemode"
+{
+	"name"		"BaseWars [RGaming]"
+	"version"	"1.1"
+
+	"author_name"	"LmaoLlama Fixed by Grondo4"
+	"author_email"	""
+	"author_url"	""
+	
+	"icon"		""
+	"info"		""
+	"hide"		"0"
+  
+      "mappattern"
+        {
+			"1" "^rpdm_"
+
+        }
+
+        "selectable"	"1"
+        "description"	"Terrorists are getting killed by Traitors and must defend themselves, but who are the Traitors?"
+
+
+}
+

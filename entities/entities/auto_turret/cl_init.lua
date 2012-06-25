@@ -1,0 +1,10 @@
+
+include('shared.lua')
+
+ENT.RenderGroup 		= RENDERGROUP_OPAQUE
+
+function ENT:GetOverlayText()
+
+	return self:GetPlayerName()	
+	
+end

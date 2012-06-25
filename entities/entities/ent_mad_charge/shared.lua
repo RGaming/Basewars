@@ -1,0 +1,6 @@
+ENT.Type 		= "anim"
+ENT.PrintName	= "Explosive Charge"
+ENT.Author		= "Worshipper"
+ENT.Contact		= "Josephcadieux@hotmail.com"
+ENT.Purpose		= ""
+ENT.Instructions	= ""
