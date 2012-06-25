@@ -3,7 +3,7 @@
 	"name"		"BaseWars [RGaming]"
 	"version"	"1.1"
 
-	"author_name"	"LmaoLlama Fixed by Grondo4"
+	"author_name"	"Adapted from LmaoLlama by nickelpro and Uggleking"
 	"author_email"	""
 	"author_url"	""
 	
