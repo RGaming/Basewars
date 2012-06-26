@@ -47,7 +47,6 @@ AddCSLuaFile( "copypasta.lua" );
 AddCSLuaFile( "buymenu_shipments.lua" );
 AddCSLuaFile( "LmaoLlama/simpleHud.lua" );
 AddCSLuaFile( "sh_teammenu.lua" );
-AddCSLuaFile( "physables.lua" );
 AddCSLuaFile( "language_sh.lua" );
 
 --Falco's prop protection
