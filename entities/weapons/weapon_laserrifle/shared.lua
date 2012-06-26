@@ -16,6 +16,7 @@ if ( CLIENT ) then
 	SWEP.Slot				= 3
 	SWEP.SlotPos			= 14
 	SWEP.ViewModelFlip		= true
+    SWEP.IconLetter         = "."
 
 	killicon.AddFont( "weapon_laserrifle", "HL2MPTypeDeath", SWEP.IconLetter, Color( 100, 100, 100, 255 ) )
 	
