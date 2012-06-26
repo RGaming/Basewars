@@ -80,6 +80,12 @@ physgunables = {
 "sign"
 }
 
+function Notify(ply, message)
+	umsg.Start("notify", ply)
+		umsg.String(message)
+	umsg.End()
+end
+
 function ccWithdrawGun( ply, cmd, args )
 	// in case of jackasses trying to exploit the game, or any other wierd shit that could happen.
 	if (args[1]==nil || args[2] == nil) then 

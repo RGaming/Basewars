@@ -1,6 +1,10 @@
 
 DeriveGamemode( "sandbox" );
 
+usermessage.Hook("notify", function(msg)
+     GAMEMODE:AddNotify(msg:ReadString(), 0, 5);
+end);
+
 drugeffect_doubletapmod = 0.675
 
 GUIToggled = false;
