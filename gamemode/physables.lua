@@ -151,9 +151,9 @@ function ccSetWeapon( ply, cmd, args )
 		targent:StartProduction(ply,guntype)
 	else
 		if guntype=="resetbutton" then
-			notification.AddLegacy("Only Gun Factory owner can cancel weapon production." , NOTIFY_ERROR, 2 )
+			Notify(ply, 0, 3,"Only Gun Factory owner can cancel weapon production." );
 		else
-			notification.AddLegacy( "Cant make weapon." , NOTIFY_ERROR, 2 )
+			Notify( ply, 0, 3, "Cant make weapon." );
 		end
 		umsg.Start( "killgunfactorygui", ply );
 			umsg.Short( args[1] )
