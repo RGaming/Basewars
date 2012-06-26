@@ -148,7 +148,9 @@ function ENT:createGun()
 	self.Entity:SetNWBool("sparking",false)
 	self.Ready = true
 	local gun = ents.Create("spawned_weapon")
-	if self.GunType=="laserbeam" then
+	if self.GunType=="resetbutton" then
+		return
+	elseif self.GunType=="laserbeam" then
 		gun:SetModel( "models/weapons/w_irifle.mdl" );
 		gun:SetNWString("weaponclass", "weapon_lasergun")
 	elseif self.GunType=="laserrifle" then
