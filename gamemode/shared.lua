@@ -1,6 +1,3 @@
-AddCSLuaFile( "physables.lua" );
-include("physables.lua")
-
 team.SetUp( 1, "Citizen", Color( 125, 125, 125, 255 ) );
 --team.SetUp( 2, "Cop", Color( 25, 25, 170, 255 ) );
 --team.SetUp( 3, "Mayor", Color( 150, 20, 20, 255 ) );
