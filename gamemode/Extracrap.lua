@@ -284,7 +284,7 @@ function BuySuperGenerator( ply )
 	
 	local tr = util.TraceLine( trace );
 		
-		if( not ply:CanAfford( CfgVars["generatorcost"] ) ) then
+		if( not ply:CanAfford( CfgVars["supergeneratorcost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
 			return "";
 		end
@@ -292,7 +292,7 @@ function BuySuperGenerator( ply )
 			Notify( ply, 4, 3, "Max Super Power Plants Reached!" );
 			return "";
 		end
-		ply:AddMoney( CfgVars["generatorcost"] * -1 );
+		ply:AddMoney( CfgVars["supergeneratorcost"] * -1 );
 		Notify( ply, 0, 3, "You bought a Super Power Plant" );
 		local gunlab = ents.Create( "superpowerplant" );
 		 

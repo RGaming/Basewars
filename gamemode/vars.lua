@@ -88,6 +88,7 @@ CfgVars["scannercost"] = 250
 CfgVars["allowantidote"] = 1
 CfgVars["antidotecost"] = 1000
 CfgVars["generatorcost"] = 400
+CfgVars["supergeneratorcost"] = 1400
 CfgVars["shockwavecost"] = 400
 CfgVars["doubletapcost"] = 600
 CfgVars["knockbackcost"] = 400
