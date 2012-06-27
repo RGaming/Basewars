@@ -285,8 +285,8 @@ function payall()
             amount = amount + math.random(150,200)
         end
         v:AddMoney( amount )
-        Notify(ply, 0, 3,"Payday you made "..amount.."dollars!" );
+        Notify(ply, 0, 3,"Payday you made "..amount.." dollars!" );
     end
 end
 
-timer.Create('Payday', 30 ,0, payall())
+timer.Create( "Payday", 30, 0, payall )

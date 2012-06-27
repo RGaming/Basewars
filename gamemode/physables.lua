@@ -147,7 +147,7 @@ function ccSetWeapon( ply, cmd, args )
 	end
 	local vault = ents.GetByIndex(args[1])
     if (targent:GetClass()!="gunfactory" || ply:GetPos():Distance(targent:GetPos())>300) then return end
-	if (targent:CanProduce()) then
+	if (targent:CanProduce(guntype, ply)) then
 		targent:StartProduction(ply,guntype)
 	else
 		if guntype=="resetbutton" then
