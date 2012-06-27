@@ -698,7 +698,7 @@ function BuyShipment( ply, args )
 			local weapon = ents.Create( "spawned_shipment" );
 			weapon.WeaponModel = ( "models/weapons/w_snip_awp.mdl" );
 			weapon:SetNWString("weaponclass", "ls_sniper");
-			weapon:SetNWString("Contents", "FlameThrower Shipment");
+			weapon:SetNWString("Contents", "Sniper Shipment");
 			weapon:SetPos( Vector(tr.HitPos.x, tr.HitPos.y, tr.HitPos.z));
 			weapon:Spawn();
 -- Auto Shotgun
