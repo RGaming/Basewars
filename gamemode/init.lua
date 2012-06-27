@@ -271,22 +271,26 @@ hook.Add( "InitPostEntity", "GlassUnbreakable", UnbreakableGlass )
 
 function payall()
     for k,v in pairs( player.GetAll() ) do 
-        local amount = 0
+        local amount = 1
         if !v:CanAfford(20000) then
-            amount = amount + math.random(10,25)
+            amount = amount + math.random(25,37)
         end
         if !v:CanAfford(10000) then
-            amount = amount + math.random(30,45)
+            amount = amount + math.random(50,75)
         end
         if !v:CanAfford(5000) then
-            amount = amount + math.random(20,35)
+            amount = amount + math.random(100,150)
         end
-        if !v:CanAfford(500) then
-            amount = amount + math.random(150,200)
+        if !v:CanAfford(1500) then
+            amount = amount + math.random(200,300)
         end
         v:AddMoney( amount )
-        Notify(v, 0, 3,"Payday you made "..amount.." dollars!" );
+        if !v:CanAfford(20000) then
+            Notify(v, 0, 3,"Payday you made "..amount.." dollars!" );
+        else 
+            Notify(v, 0, 3,"You're rich you get $1 for payday" );
+        end
     end
 end
 
-timer.Create( "Payday", 30, 0, payall )
+timer.Create( "Payday", 60, 0, payall )
