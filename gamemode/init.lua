@@ -24,6 +24,11 @@
 -- By: LmaoLLama
 -- Started June 26, 2010
 -------------
+-------------
+-- RGaming Basewars
+-- By: Uggleking and nickelpro
+-- Started June 25, 2012
+-------------
 
 
 DeriveGamemode( "sandbox" );
