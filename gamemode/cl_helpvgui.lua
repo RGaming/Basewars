@@ -767,9 +767,9 @@ function DermaHelp()
 	
     PropertySheet:AddSheet("Help", helmhtml, "gui/silkicons/page", false, false, "Help")
 	--DermaHelpTab(HELP, "Help", "Help", "gui/silkicons/page")
-	DermaHelpTab(RULES, "Rules", "Rules", "gui/silkicons/exclamation")
+    DermaHelpTab(RULES, "Rules", "Rules", "gui/silkicons/exclamation")
 	DermaHelpTab(ABOUT, "About", "About", "gui/silkicons/world")
-	DermaHelpTab(CHANGELOG, "ChangeLog", "Change Log", "gui/silkicons/page_white_wrench")
+	--DermaHelpTab(CHANGELOG, "ChangeLog", "Change Log", "gui/silkicons/page_white_wrench")
 	--DermaStatsTab()
 end	
 
