@@ -26,7 +26,7 @@ function ENT:Initialize()
 	self.Inactive = false
 	self.unowned = false
 	self.Entity:SetNWInt("power",0)
-	self.Payout={CfgVars["druglabcost"],"Drug Lab"}
+	self.Payout={CfgVars["supplytablecost"],"Supply Table"}
 	self.Dontcall3 = false
 	self.Dontcall2 = false
 	self.Dontcall1 = false
