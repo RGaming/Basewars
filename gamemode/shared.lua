@@ -21,10 +21,10 @@ team.SetUp( 1, "Citizen", Color( 125, 125, 125, 255 ) );
 --team.SetUp( 20, "Gabe Newell", Color( 238, 99, 99, 255 ) );
 GMS = {}
 
-GM.Name 	= "Base Wars 2.2b (Derived from WCA Plant Combat)"
-GM.Author 	= "By Llamalords Editied by Grondo4"
-GM.Email 	= "jupiterjrb@msn.com"
-GM.Website 	= "www.LmaoLlama.com"
+GM.Name 	= "RGaming Base Wars"
+GM.Author 	= "By Uggleking and nickelpro"
+GM.Email 	= "nickelpro@gmail.com"
+GM.Website 	= "www.xldoy.com/blog"
 
 --include("sh_teammenu.lua")
 
