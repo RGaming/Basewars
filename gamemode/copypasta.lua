@@ -1,5 +1,9 @@
 local CfgVars = { }
 
+
+CfgVars["supplytablecost"] = 750 --temporary, I have no idea how much supply
+				 --are supposed to cost and this list needs a
+				 --serious make over anyway ~~NickG
 CfgVars["warrantcost"] = 50
 CfgVars["jeepcost"] = 500
 CfgVars["armorcost"] = 700
