@@ -483,7 +483,12 @@ end
 
 
 function GM:PlayerSpawn( ply )
-	ply:Extinguish()
+	
+    local default_walk = 250
+    local default_run = 500
+    GAMEMODE:SetPlayerSpeed(ply, default_walk, default_run)
+    
+    ply:Extinguish()
 	GAMEMODE:PlayerSetModel(ply)
 	UpdateDrugs(ply)
 
@@ -562,8 +567,8 @@ function GM:PlayerLoadout( ply, tr )
 			ply:Give( "weapon_moneycannon" )
 		end
 
-		ply:Give( "gmod_tool" );
-		ply:Give( "weapon_physgun" );
+	ply:Give( "gmod_tool" );
+	ply:Give( "weapon_physgun" );
 
 	--Citizen
 		ply:Give("weapon_p2282")
@@ -673,7 +678,7 @@ function GM:PlayerInitialSpawn( ply )
 	ply:SetNWBool("helpExtracrap", false)
 	ply:SetNWBool("helpHitman", false) 
 	
-	ply:PrintMessage( HUD_PRINTTALK, "This server is running LmaoLlama Base Wars v1.1! (baseWar)" ) 
+	ply:PrintMessage( HUD_PRINTTALK, "This server is running [RGaming] Base Wars! (baseWar)" ) 
 	ply:PrintMessage( HUD_PRINTTALK, "Build Bases, Make Enemies. Have fun!" )
 	ply:PrintMessage( HUD_PRINTTALK, "Help is here ask players or press F1." )
 	ply:PrintMessage( HUD_PRINTTALK, "Basing with friends is the best way to base, But basing with your self is a good way to learn." )
