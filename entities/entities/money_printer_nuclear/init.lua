@@ -12,7 +12,7 @@ include('shared.lua')
 
 function ENT:Initialize()
 	self.Entity:SetModel("models/props/de_train/Barrel.mdl")
-	
+
 	self.Panel = ents.Create("prop_dynamic_override")
 	self.Panel:SetModel( "models/props_lab/crematorcase.mdl" )
 	self.Panel:SetPos(self.Entity:GetPos()+self.Entity:GetAngles():Forward()+self.Entity:GetAngles():Up()*45)
@@ -31,7 +31,7 @@ function ENT:Initialize()
 	self.Panel1:SetMoveType(MOVETYPE_NONE)
 	self.Panel1:SetColor(0,255,85,255)
 	self.Panel1:SetMaterial( "models/shiny" )
-	
+
 	self.Panel2 = ents.Create("prop_dynamic_override")
 	self.Panel2:SetModel( "models/props_lab/reciever01a.mdl" )
 	self.Panel2:SetPos(self.Entity:GetPos()+self.Entity:GetAngles():Forward()*0+self.Entity:GetAngles():Right()*15+self.Entity:GetAngles():Up()*15)
@@ -41,7 +41,7 @@ function ENT:Initialize()
 	self.Panel2:SetMoveType(MOVETYPE_NONE)
 	self.Panel2:SetColor(0,255,85,255)
 	self.Panel2:SetMaterial( "models/shiny" )
-	
+
 	self.Panel3 = ents.Create("prop_dynamic_override")
 	self.Panel3:SetModel( "models/props_lab/reciever01a.mdl" )
 	self.Panel3:SetPos(self.Entity:GetPos()+self.Entity:GetAngles():Forward()*15+self.Entity:GetAngles():Right()*0+self.Entity:GetAngles():Up()*15)
@@ -51,7 +51,7 @@ function ENT:Initialize()
 	self.Panel3:SetMoveType(MOVETYPE_NONE)
 	self.Panel3:SetColor(0,255,85,255)
 	self.Panel3:SetMaterial( "models/shiny" )
-	
+
 	self.Entity:PhysicsInit( SOLID_VPHYSICS )
 	self.Entity:SetMoveType( MOVETYPE_VPHYSICS )
 	self.Entity:SetSolid( SOLID_VPHYSICS )
@@ -77,13 +77,13 @@ function ENT:giveMoney()
 	local ply = self.Owner
 	if(ValidEntity(ply) && !self.Inactive && self.Entity:IsPowered()) then
 		// ply:AddMoney( 25 );
-		
+
 		local trace = { }
-		
+
 		trace.start = self.Entity:GetPos()+self.Entity:GetAngles():Up()*15;
 		trace.endpos = trace.start + self.Entity:GetAngles():Forward() + self.Entity:GetAngles():Right()
 		trace.filter = self.Entity
-		
+
 		local tr = util.TraceLine( trace );
 		local amount = math.random( 1000000, 1001000 )
 		if (self.Entity:GetNWInt("upgrade")==2) then
@@ -92,17 +92,17 @@ function ENT:giveMoney()
 			amount = math.random( 1250000, 1250000 )
 		end
 		local moneybag = ents.Create( "prop_moneybag" );
-		moneybag:SetModel( "models/notes.mdl" );
+		moneybag:SetModel( "models/props/cs_assault/Money.mdl" );
 		moneybag:SetPos(self.Entity:GetPos()+self.Entity:GetAngles():Forward()*17+self.Entity:GetAngles():Right()*0+self.Entity:GetAngles():Up()*15)
 		moneybag:SetAngles(Angle(0,90,90))
 		moneybag:Spawn();
 		moneybag:SetColor(200,255,200,255)
 			moneybag:SetMoveType( MOVETYPE_VPHYSICS )
-		
-		
+
+
 		moneybag:GetTable().MoneyBag = true;
 		moneybag:GetTable().Amount = amount
-		
+
 		local moneybag2 = ents.Create( "prop_moneybag" );
 		moneybag2:SetModel( "models/props/cs_assault/Money.mdl" );
 		moneybag2:SetPos(self.Entity:GetPos()+self.Entity:GetAngles():Forward()*0+self.Entity:GetAngles():Right()*17+self.Entity:GetAngles():Up()*15)
@@ -110,22 +110,22 @@ function ENT:giveMoney()
 		moneybag2:Spawn();
 		moneybag2:SetColor(200,255,200,255)
 			moneybag2:SetMoveType( MOVETYPE_VPHYSICS )
-		        
+
 		moneybag2:GetTable().MoneyBag = true;
 		moneybag2:GetTable().Amount = amount
 
 		local moneybag3 = ents.Create( "prop_moneybag" );
-		moneybag3:SetModel( "models/notes.mdl" );
+		moneybag3:SetModel( "models/props/cs_assault/Money.mdl" );
 		moneybag3:SetPos(self.Entity:GetPos()+self.Entity:GetAngles():Forward()*0+self.Entity:GetAngles():Right()*-17+self.Entity:GetAngles():Up()*15)
 		moneybag3:SetAngles(Angle(0,0,90))
 		moneybag3:Spawn();
 		moneybag3:SetMoveType( MOVETYPE_VPHYSICS )
 		moneybag3:SetColor(200,255,200,255)
-		
+
 		moneybag3:GetTable().MoneyBag = true;
 		moneybag3:GetTable().Amount = amount
 
-		
+
 		Notify( ply, 0, 3, "Counterfeit money printer created $" .. amount );
 	elseif (self.Inactive) then
 		Notify( ply, 4, 3, "A money printer is inactive, press use on it to make it active again." );
@@ -156,7 +156,7 @@ function ENT:Use(activator,caller)
 		self.NearInact = false
 		self.Entity:SetNWBool("sparking",true)
 		timer.Create( tostring(self.Entity) .. "resupply", 1, 1, self.Reload, self)
-		
+
 	end
 end
 
@@ -172,7 +172,7 @@ function ENT:Reload()
 	local drugPos = self.Entity:GetPos()
 	self.Entity:SetNWBool("sparking",false)
 end
- 
+
 function ENT:Think()
 	if (ValidEntity(self.Owner)==false) then
 		self.Entity:Remove()
@@ -180,7 +180,7 @@ function ENT:Think()
 end
 
 function ENT:OnRemove( )
-	timer.Destroy(tostring(self.Entity)) 
+	timer.Destroy(tostring(self.Entity))
 	timer.Destroy(tostring(self.Entity) .. "fuckafkfags")
 	timer.Destroy(tostring(self.Entity) .. "notifyoff")
 	local ply = self.Owner

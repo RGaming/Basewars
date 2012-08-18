@@ -1377,7 +1377,7 @@ function DropMoney( ply, args )
 	local tr = util.TraceLine( trace );
 
 	local moneybag = ents.Create( "prop_moneybag" );
-	moneybag:SetModel( "models/notes.mdl" )
+  moneybag:SetModel( "models/props/cs_assault/Money.mdl" );
 	moneybag:SetPos( tr.HitPos );
 	moneybag:Spawn();
 	moneybag:SetColor(200,255,200,255)

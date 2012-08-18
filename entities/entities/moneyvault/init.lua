@@ -17,19 +17,19 @@ function ENT:Initialize( )
 	self:SetMoveType( MOVETYPE_VPHYSICS );
 	self:SetSolid( SOLID_VPHYSICS );
 	self:EmitSound( "ambient/machines/thumper_startup1.wav" );
-	
+
 	local phys = self:GetPhysicsObject( );
-	if( phys:IsValid( ) ) then 
+	if( phys:IsValid( ) ) then
 		phys:Wake( );
 	end;
-	
+
 	self.Entity:SetNWInt("damage",1000)
 	self.Entity:SetNWInt("upgrade", 0)
 	machineloop = CreateSound( self, Sound( "ambient/machines/wall_loop1.wav" ) );
 	machineloop:Play( );
-	
+
 			timer.Create("giveIntrest", 5, 0, self.giveInterest, self)
-	
+
 	self.Money = 0;
 	self.KeyPress = CurTime( );
 	local ply = self.Entity.Owner
@@ -66,7 +66,7 @@ end
 function ENT:EjectMoney( )
 	if self.Money > 0 then
 		local moneybag = ents.Create( "prop_moneybag" );
-			moneybag:SetModel( "models/notes.mdl" );
+      moneybag:SetModel( "models/props/cs_assault/Money.mdl" );
 			moneybag:SetPos( self:GetPos( ) + Vector( 0, 0, 20 ) );
 			moneybag:SetAngles( self:GetAngles( ) );
 			moneybag:SetColor( 200, 255, 200, 255 );
@@ -75,7 +75,7 @@ function ENT:EjectMoney( )
 			moneybag:GetTable( ).Amount = self.Money;
 			moneybag:SetVelocity( Vector( 0, 0, 10 ) * 10 );
 			moneybag.Ejected = true;
-			
+
 			self.Money = 0;
 			self:UpdateMoney( );
 	else
@@ -115,7 +115,7 @@ concommand.Add( "ll_vault_deposit", function( ply, cmd, argv )
 		ply:ChatPrint "You can't afford that!";
 		return;
 	end;
-	
+
 	ply:AddMoney( amt );
 	local trace = { };
 		trace.start = ply:GetShootPos( );
