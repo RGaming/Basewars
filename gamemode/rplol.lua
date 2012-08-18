@@ -17,17 +17,17 @@ function foodHeal( pl )
 end
 
 function DrugPlayer(pl)
-	pl:ConCommand("pp_motionblur 1")  
-	pl:ConCommand("pp_motionblur_addalpha 0.05")  
-	pl:ConCommand("pp_motionblur_delay 0.035")  
-	pl:ConCommand("pp_motionblur_drawalpha 0.75")  
-	pl:ConCommand("pp_dof 1")  
-	pl:ConCommand("pp_dof_initlength 9")  
-	pl:ConCommand("pp_dof_spacing 100") 
+	pl:ConCommand("pp_motionblur 1")
+	pl:ConCommand("pp_motionblur_addalpha 0.05")
+	pl:ConCommand("pp_motionblur_delay 0.035")
+	pl:ConCommand("pp_motionblur_drawalpha 0.75")
+	pl:ConCommand("pp_dof 1")
+	pl:ConCommand("pp_dof_initlength 9")
+	pl:ConCommand("pp_dof_spacing 100")
 
 	local IDSteam = string.gsub(pl:SteamID(), ":", "")
-	
-	
+
+
 	// lol.
 	if (pl:GetTable().Antidoted) then
 		timer.Create( IDSteam, 5, 1, UnDrugPlayer, pl)
@@ -37,22 +37,22 @@ function DrugPlayer(pl)
 end
 
 function UnDrugPlayer(pl)
-	pl:ConCommand("pp_motionblur 0")  
-	pl:ConCommand("pp_dof 0")  
+	pl:ConCommand("pp_motionblur 0")
+	pl:ConCommand("pp_dof 0")
 end
 
 function BoozePlayer(pl)
-	pl:ConCommand("pp_motionblur 1")  
-	pl:ConCommand("pp_motionblur_addalpha 0.05")  
-	pl:ConCommand("pp_motionblur_delay 0.035")  
-	pl:ConCommand("pp_motionblur_drawalpha 0.75")  
-	pl:ConCommand("pp_dof 1")  
-	pl:ConCommand("pp_dof_initlength 9")  
-	pl:ConCommand("pp_dof_spacing 100") 
+	pl:ConCommand("pp_motionblur 1")
+	pl:ConCommand("pp_motionblur_addalpha 0.05")
+	pl:ConCommand("pp_motionblur_delay 0.035")
+	pl:ConCommand("pp_motionblur_drawalpha 0.75")
+	pl:ConCommand("pp_dof 1")
+	pl:ConCommand("pp_dof_initlength 9")
+	pl:ConCommand("pp_dof_spacing 100")
 
 	local IDSteam = string.gsub(pl:SteamID(), ":", "")
-	
-	
+
+
 	// lol.
 	if (pl:GetTable().Antidoted) then
 		timer.Create( IDSteam, 5, 1, UnBoozePlayer, pl)
@@ -62,18 +62,18 @@ function BoozePlayer(pl)
 end
 
 function UnBoozePlayer(pl)
-	pl:ConCommand("pp_motionblur 0")  
-	pl:ConCommand("pp_dof 0")  
+	pl:ConCommand("pp_motionblur 0")
+	pl:ConCommand("pp_dof 0")
 end
 
 function dropWeapon( ply )
 
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 	local ent = ply:GetActiveWeapon()
 	if !ValidEntity(ent) then return  ""; end
@@ -342,15 +342,15 @@ function scanPlayer( ply, args )
 				ply:AddMoney( CfgVars["scancost"] * -1 );
 				Notify( ply, 0, 3, "Scanning..." );
 				Notify(target,1,3, ply:GetName() .. " has scanned you")
-				
+
 				if tower:GetNWInt("upgrade")>=1 then
 					SpyScan(ply,target,false)
 				end
 				if tower:GetNWInt("upgrade")>=2 then
 					ReconScan(ply,target)
 				end
-			end 
-			
+			end
+
 			if(!userExists) then
 				Notify( ply, 4, 3, "Player not found." );
 			end
@@ -363,9 +363,9 @@ AddChatCommand( "/scan", scanPlayer );
 function playerMobhit( ply, args )
 	args = Purify(args)
 	args = string.Explode(" ", args)
-	
+
 		//local useridExists = false
-		//for k, v in pairs(player.GetAll()) do  
+		//for k, v in pairs(player.GetAll()) do
 		local v = FindPlayer(args[1])
 		if ValidEntity(v) then
 			//if(v:Alive()) then
@@ -382,15 +382,15 @@ function playerMobhit( ply, args )
 						v:SetNWInt("hitlist", v:GetNWInt("hitlist")+math.Round(tonumber(args[2])/2))
 					//	Jackpot = Jackpot+math.Round(tonumber(args[2])/2)
 						Notify( ply, 0, 3, "Mob hit set for $" .. math.Round(tonumber(args[2])/2) );
-						for a, b in pairs(player.GetAll()) do  
+						for a, b in pairs(player.GetAll()) do
 							if(b:Alive()) then
-								b:PrintMessage( HUD_PRINTCENTER, v:Nick() .. " Has had a mob hit placed on them!" ) 
+								b:PrintMessage( HUD_PRINTCENTER, v:Nick() .. " Has had a mob hit placed on them!" )
 							end
 						end
 				//end
 			//end
-		end 
-	
+		end
+
 		/*if(useridExists == false) then
 			Notify( ply, 4, 3, "UserId does not exist." );
 		end*/
@@ -403,15 +403,15 @@ function BuyPistol( ply, args )
 	args = Purify(args)
     if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 
-	
-	
+
+
 	if( args == "deagle" ) then
 		if( not ply:CanAfford( CfgVars["deaglecost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -527,13 +527,13 @@ function BuyShipment( ply, args )
 	args = Purify(args)
     if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	local mult=1	
+	local mult=1
 	local tr = util.TraceLine( trace );
--- Mac-10	
+-- Mac-10
 	if( args == "mac10" || args == "mac" ) then
 		if( not ply:CanAfford( 1.5*CfgVars["mac10cost"]*mult ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -547,7 +547,7 @@ function BuyShipment( ply, args )
 			weapon:SetNWString("Contents", "Mac-10 Shipment");
 			weapon:SetPos( Vector(tr.HitPos.x, tr.HitPos.y, tr.HitPos.z));
 			weapon:Spawn();
--- TMP	
+-- TMP
 	elseif( args == "tmp" || args == "TMP" ) then
 		if( not ply:CanAfford( 1.5*CfgVars["tmpcost"]*mult ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -561,7 +561,7 @@ function BuyShipment( ply, args )
 			weapon:SetNWString("Contents", "TMP Shipment");
 			weapon:SetPos( Vector(tr.HitPos.x, tr.HitPos.y, tr.HitPos.z));
 			weapon:Spawn();
--- UMP45	
+-- UMP45
 	elseif( args == "ump" || args == "ump45" ) then
 		if( not ply:CanAfford( 1.5*CfgVars["umpcost"]*mult ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -575,7 +575,7 @@ function BuyShipment( ply, args )
 			weapon:SetNWString("Contents", "Ump45 Shipment");
 			weapon:SetPos( Vector(tr.HitPos.x, tr.HitPos.y, tr.HitPos.z));
 			weapon:Spawn();
--- M4A1	
+-- M4A1
 	elseif( args == "m4" || args == "m16" ) then
 		if( not ply:CanAfford( 1.5*CfgVars["m16cost"]*mult ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -728,11 +728,11 @@ function BuyShipment( ply, args )
 			weapon:SetNWString("weaponclass", "weapon_autosnipe");
 			weapon:SetNWString("Contents", "AutoSniper Shipment");
 			weapon:SetPos( Vector(tr.HitPos.x, tr.HitPos.y, tr.HitPos.z));
-			weapon:Spawn();			
+			weapon:Spawn();
 	else
 		Notify( ply, 4, 3, "That's not an available weapon." );
 	end
-	
+
 	return "";
 end
 AddChatCommand( "/buyshipment", BuyShipment );
@@ -742,14 +742,14 @@ function BuyWeapon( ply, args )
 	args = Purify(args)
     if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	local mult=1	
+	local mult=1
 	local tr = util.TraceLine( trace );
 
-	
+
 	if( args == "ak47" || args == "ak" ) then
 		if( not ply:CanAfford( CfgVars["ak47cost"]*.5 ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -757,7 +757,7 @@ function BuyWeapon( ply, args )
 		end
 		ply:AddMoney( (CfgVars["ak47cost"]*.5) * -1 );
 		Notify( ply, 0, 3, "You bought a ak47!" );
-		
+
 			local weapon = ents.CreateEx( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_rif_ak47.mdl" );
 			weapon:SetNWString("weaponclass", "weapon_ak472");
@@ -771,7 +771,7 @@ function BuyWeapon( ply, args )
 		end
 		ply:AddMoney( (CfgVars["augcost"]*.5) * -1 );
 		Notify( ply, 0, 3, "You bought a aug!" );
-		
+
 			local weapon = ents.CreateEx( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_rif_aug.mdl" );
 			weapon:SetNWString("weaponclass", "weapon_aug2");
@@ -785,13 +785,13 @@ function BuyWeapon( ply, args )
 		end
 		ply:AddMoney( (CfgVars["flamethrowercost"]*.5) * -1 );
 		Notify( ply, 0, 3, "You bought a flamethrower!" );
-		
+
 			local weapon = ents.CreateEx( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_smg1.mdl" );
 			weapon:SetNWString("weaponclass", "weapon_flamethrower");
 			weapon:SetPos( Vector(tr.HitPos.x, tr.HitPos.y + (10), tr.HitPos.z));
 			weapon:Spawn();
-			
+
 	elseif( args == "galil" ) then
 		if( not ply:CanAfford( CfgVars["galilcost"]*.5 ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -799,13 +799,13 @@ function BuyWeapon( ply, args )
 		end
 		ply:AddMoney( (CfgVars["galilcost"]*.5) * -1 );
 		Notify( ply, 0, 3, "You bought a galil!" );
-		
+
 			local weapon = ents.CreateEx( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_rif_galil.mdl" );
 			weapon:SetNWString("weaponclass", "weapon_galil2");
 			weapon:SetPos( Vector(tr.HitPos.x, tr.HitPos.y + (10), tr.HitPos.z));
 			weapon:Spawn();
-			
+
 	elseif( args == "mp5" || args== "mp5navy" ) then
 		if( not ply:CanAfford( CfgVars["mp5cost"]*.5 ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -813,13 +813,13 @@ function BuyWeapon( ply, args )
 		end
 		ply:AddMoney( CfgVars["mp5cost"]*.5 * -1 );
 		Notify( ply, 0, 3, "You bought a mp5!" );
-		
+
 			local weapon = ents.CreateEx( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_smg_mp5.mdl" );
 			weapon:SetNWString("weaponclass", "weapon_mp52");
 			weapon:SetPos( Vector(tr.HitPos.x, tr.HitPos.y + (10), tr.HitPos.z));
 			weapon:Spawn();
-			
+
 	elseif( args == "tmp") then
 		if( not ply:CanAfford( CfgVars["tmpcost"]*.5 ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -827,7 +827,7 @@ function BuyWeapon( ply, args )
 		end
 		ply:AddMoney( CfgVars["tmpcost"]*.5 * -1 );
 		Notify( ply, 0, 3, "You bought a TMP!" );
-		
+
 			local weapon = ents.CreateEx( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_smg_tmp.mdl" );
 			weapon:SetNWString("weaponclass", "weapon_tmp2");
@@ -841,7 +841,7 @@ function BuyWeapon( ply, args )
 		end
 		ply:AddMoney( CfgVars["m16cost"]*.5 * -1 );
 		Notify( ply, 0, 3, "You bought a m4!" );
-		
+
 			local weapon = ents.CreateEx( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_rif_m4a1.mdl" );
 			weapon:SetNWString("weaponclass", "weapon_m42");
@@ -855,7 +855,7 @@ function BuyWeapon( ply, args )
 		end
 		ply:AddMoney( CfgVars["mac10cost"]*.5 * -1 );
 		Notify( ply, 0, 3, "You bought a mac10!" );
-		
+
 			local weapon = ents.CreateEx( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_smg_mac10.mdl" );
 			weapon:SetNWString("weaponclass", "weapon_mac102");
@@ -869,7 +869,7 @@ function BuyWeapon( ply, args )
 		end
 		ply:AddMoney( CfgVars["umpcost"]*.5* -1 );
 		Notify( ply, 0, 3, "You bought a ump45!" );
-		
+
 			local weapon = ents.CreateEx( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_smg_ump45.mdl" );
 			weapon:SetNWString("weaponclass", "weapon_ump452");
@@ -883,7 +883,7 @@ function BuyWeapon( ply, args )
 		end
 		ply:AddMoney( CfgVars["shotguncost"]*.5 * -1 );
 		Notify( ply, 0, 3, "You bought a shotgun!" );
-		
+
 			local weapon = ents.CreateEx( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_shot_m3super90.mdl" );
 			weapon:SetNWString("weaponclass", "weapon_pumpshotgun2");
@@ -897,7 +897,7 @@ function BuyWeapon( ply, args )
 		end
 		ply:AddMoney( CfgVars["autoshotguncost"]*.5 * -1 );
 		Notify( ply, 0, 3, "You bought a m1014!" );
-		
+
 			local weapon = ents.CreateEx( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_shot_xm1014.mdl" );
 			weapon:SetNWString("weaponclass", "weapon_autoshotgun2");
@@ -911,7 +911,7 @@ function BuyWeapon( ply, args )
 		end
 		ply:AddMoney( CfgVars["snipercost"]*.5 * -1 );
 		Notify( ply, 0, 3, "You bought a sniper rifle!" );
-		
+
 			local weapon = ents.CreateEx( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_snip_awp.mdl" );
 			weapon:SetNWString("weaponclass", "ls_sniper");
@@ -925,7 +925,7 @@ function BuyWeapon( ply, args )
 		end
 		ply:AddMoney( CfgVars["autosnipecost"]*.5 * -1 );
 		Notify( ply, 0, 3, "You bought a automatic sniper rifles!" );
-		
+
 			local weapon = ents.CreateEx( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_snip_g3sg1.mdl" );
 			weapon:SetNWString("weaponclass", "weapon_autosnipe");
@@ -939,7 +939,7 @@ function BuyWeapon( ply, args )
 		end
 		ply:AddMoney( CfgVars["rpgcost"]*.5 * -1 );
 		Notify( ply, 0, 3, "You bought a rocket launcher!" );
-		
+
 			local weapon = ents.CreateEx( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_rocket_launcher.mdl" );
 			weapon:SetNWString("weaponclass", "weapon_rocketlauncher");
@@ -953,7 +953,7 @@ function BuyWeapon( ply, args )
 		end
 		ply:AddMoney( CfgVars["paracost"]*.5 * -1 );
 		Notify( ply, 0, 3, "You bought a Para!" );
-		
+
 			local weapon = ents.CreateEx( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_mach_m249para.mdl" );
 			weapon:SetNWString("weaponclass", "weapon_50cal2");
@@ -968,7 +968,7 @@ function BuyWeapon( ply, args )
 		end
 		ply:AddMoney( CfgVars["flashbangcost"]*.5 * -1 );
 		Notify( ply, 0, 3, "You bought a stun grenade!" );
-		
+
 			local weapon = ents.CreateEx( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_eq_flashbang.mdl" );
 			weapon:SetNWString("weaponclass", "cse_eq_flashbang");
@@ -982,7 +982,7 @@ function BuyWeapon( ply, args )
 		end
 		ply:AddMoney( CfgVars["gasgrenadecost"]*.5 * -1 );
 		Notify( ply, 0, 3, "You bought a gas grenade!" );
-		
+
 			local weapon = ents.CreateEx( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_eq_smokegrenade.mdl" );
 			weapon:SetNWString("weaponclass", "weapon_gasgrenade");
@@ -998,7 +998,7 @@ function BuyWeapon( ply, args )
 		end
 		ply:AddMoney( -2000 );
 		Notify( ply, 0, 3, "You bought a shipment of Sticky Grenades!" );
-		for i=-1, 1, 1 do 
+		for i=-1, 1, 1 do
 			local weapon = ents.Create( "spawned_weapon" );
 			weapon:SetModel( "models/Weapons/w_bugbait.mdl" );
 			weapon:SetNWString("weaponclass", "weapon_stickgrenade");
@@ -1013,7 +1013,7 @@ function BuyWeapon( ply, args )
 		end
 		ply:AddMoney( -5000 );
 		Notify( ply, 0, 3, "You bought a shipment of Inced Grenades!" );
-		for i=-1, 1, 1 do 
+		for i=-1, 1, 1 do
 			local weapon = ents.Create( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_eq_flashbang.mdl" );
 			weapon:SetNWString("weaponclass", "weapon_incedgrenade");
@@ -1027,7 +1027,7 @@ function BuyWeapon( ply, args )
 		end
 		ply:AddMoney( -500 );
 		Notify( ply, 0, 3, "You bought a shipment of Door Charges!" );
-		for i=-1, 1, 1 do 
+		for i=-1, 1, 1 do
 			local weapon = ents.Create( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_slam.mdl" );
 			weapon:SetNWString("weaponclass", "weapon_mad_charge");
@@ -1056,7 +1056,7 @@ function BuyWeapon( ply, args )
 		end
 		ply:AddMoney( CfgVars["grenadecost"]*mult * -1 );
 		Notify( ply, 0, 3, "You bought a shipment of grenades!" );
-		for i=-1, 1, 1 do 
+		for i=-1, 1, 1 do
 			local weapon = ents.Create( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_eq_fraggrenade.mdl" );
 			weapon:SetNWString("weaponclass", "cse_eq_hegrenade");
@@ -1072,7 +1072,7 @@ function BuyWeapon( ply, args )
 --		end
 --		ply:AddMoney( -1000 );
 --		Notify( ply, 0, 3, "You bought molotovs!" );
---		
+--
 --			local weapon = ents.CreateEx( "spawned_weapon" );
 --			weapon:SetModel( "models/props_junk/garbage_glassbottle003a.mdl" );
 --			weapon:SetNWString("weaponclass", "weapon_molotov");
@@ -1082,7 +1082,7 @@ function BuyWeapon( ply, args )
 	else
 		Notify( ply, 4, 3, "That's not an available weapon." );
 	end
-	
+
 	return "";
 end
 AddChatCommand( "/buyweapon", BuyWeapon );
@@ -1110,13 +1110,13 @@ function BuyDrug( ply, args )
 	if count==nil then count = 1 end
 	if count>CfgVars["maxdruglabs"] || count<1 then count = 1 end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
-	
+
 	for i=1,count do
 		if( not ply:CanAfford( CfgVars["druglabcost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -1129,7 +1129,7 @@ function BuyDrug( ply, args )
 		ply:AddMoney( CfgVars["druglabcost"] * -1 );
 		Notify( ply, 0, 3, "You bought a Drug Lab" );
 		local druglab = ents.Create( "drug_lab" );
- 
+
 		druglab:SetPos( tr.HitPos+Vector(0,0,i*10));
 		druglab.Owner = ply
 		druglab:Spawn();
@@ -1142,11 +1142,11 @@ function BuyMicrowave( ply )
 --
 --    if( args == "" ) then return ""; end
 --	local trace = { }
---	
+--
 --	trace.start = ply:EyePos();
 --	trace.endpos = trace.start + ply:GetAimVector() * 85;
 --	trace.filter = ply;
---	
+--
 --	local tr = util.TraceLine( trace );
 --
 --		if( not ply:CanAfford( CfgVars["microwavecost"] ) ) then
@@ -1159,7 +1159,7 @@ function BuyMicrowave( ply )
 --		end
 --			ply:AddMoney( CfgVars["microwavecost"] * -1 );
 --			Notify( ply, 0, 3, "You bought a Microwave" );
---			
+--
 --			local microwave = ents.Create( "microwave" );
 --			microwave:SetNWEntity( "owner", ply )
 --			microwave:SetPos( tr.HitPos );
@@ -1171,11 +1171,11 @@ AddChatCommand( "/buymicrowave", BuyMicrowave );
 function BuyGunlab( ply )
     if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 
 		if( not ply:CanAfford( CfgVars["gunlabcost"] ) ) then
@@ -1189,7 +1189,7 @@ function BuyGunlab( ply )
 			ply:AddMoney( CfgVars["gunlabcost"] * -1 );
 			Notify( ply, 0, 3, "You bought a Gun Lab" );
 			local gunlab = ents.Create( "gunlab" );
-			 
+
 			gunlab:SetPos( tr.HitPos + Vector(0,0,64));
 			gunlab.Owner = ply
 			gunlab:Spawn();
@@ -1200,11 +1200,11 @@ AddChatCommand( "/buygunlab", BuyGunlab );
 function BuyGunvault( ply )
     if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 
 		if( not ply:CanAfford( CfgVars["gunvaultcost"] ) ) then
@@ -1218,7 +1218,7 @@ function BuyGunvault( ply )
 		ply:AddMoney( CfgVars["gunvaultcost"] * -1 );
 		Notify( ply, 0, 3, "You bought a Gun Vault" );
 		local gunlab = ents.Create( "gunvault" );
-		 
+
 		gunlab:SetPos( tr.HitPos );
 		gunlab.Owner = ply
 		gunlab:Spawn();
@@ -1229,11 +1229,11 @@ AddChatCommand( "/buygunvault", BuyGunvault );
 function BuyPillBox( ply )
     if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 
 		if( not ply:CanAfford( CfgVars["pillboxcost"] ) ) then
@@ -1247,7 +1247,7 @@ function BuyPillBox( ply )
 		ply:AddMoney( CfgVars["pillboxcost"] * -1 );
 		Notify( ply, 0, 3, "You bought a Pill Box" );
 		local gunlab = ents.Create( "pillbox" );
-		 
+
 		gunlab:SetPos( tr.HitPos+Vector(0,0,40));
 		gunlab.Owner = ply
 		gunlab:Spawn();
@@ -1260,11 +1260,11 @@ AddChatCommand( "/buypillbox", BuyPillBox );
 function BuyIncedAmmo( ply )
     if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 
 		if( not ply:CanAfford( 500 )) then
@@ -1288,15 +1288,15 @@ function BuyHealth( ply )
 		Notify( ply, 4, 3, "Cannot afford this" );
 		return "";
 	end
-	
+
 	ply:AddMoney( CfgVars["healthcost"] * -1 );
 	Notify(ply, 0, 3, "You bought a health kit")
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 80;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 	local vehiclespawn = ents.CreateEx( "item_buyhealth" );
 	vehiclespawn:SetPos( tr.HitPos + Vector(0, 0, 15));
@@ -1314,18 +1314,18 @@ AddChatCommand( "/help", GetHelp );
 function GiveMoney( ply, args )
 	args = Purify(args)
     if( args == "" ) then return ""; end
-	
+
 	local trace = ply:GetEyeTrace();
-	
+
 	if( trace.Entity:IsValid() and trace.Entity:IsPlayer() and trace.Entity:GetPos():Distance( ply:GetPos() ) < 150 and trace.Entity:GetNWBool("AFK")==false) then
-	
+
 		local amount = tonumber( args );
 		if amount==nil then return "" end
 		if( not ply:CanAfford( amount ) ) then
-		
+
 			Notify( ply, 4, 3, "Cannot afford this" );
 			return "";
-		
+
 		end
 		if  (amount!=math.Round(amount)) then
 			Notify(ply, 4, 3, "Must be a whole number" );
@@ -1333,14 +1333,14 @@ function GiveMoney( ply, args )
 		end
 		trace.Entity:AddMoney( amount );
 		ply:AddMoney( amount * -1 );
-		
+
 		Notify( trace.Entity, 2, 4, ply:Nick() .. " has given you " .. amount .. " dollars!" );
 		Notify( ply, 0, 4, "Gave " .. trace.Entity:Nick() .. " " .. amount .. " dollars!" );
-		
+
 	else
-	
+
 		Notify( ply, 1, 3, "Must be looking at and be within distance of another player that is not AFK!" );
-		
+
 	end
 	return "";
 end
@@ -1349,42 +1349,42 @@ AddChatCommand( "/give", GiveMoney );
 function DropMoney( ply, args )
 	args = Purify(args)
     if( args == "" ) then return ""; end
-	
+
 	local amount = tonumber( args );
 	if amount==nil then return "" end
 	if( not ply:CanAfford( amount ) ) then
-		
+
 		Notify( ply, 4, 3, "Cannot afford this!" );
 		return "";
-		
+
 	end
-	
+
 	if( amount < 10 || amount!=math.Round(amount)) then
-	
+
 		Notify( ply, 4, 4, "Invalid amount of money! Must be atleast 10 dollars!" );
 		return "";
-	
+
 	end
-	
+
 	ply:AddMoney( amount * -1 );
-	
+
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
-	
+
 	local moneybag = ents.Create( "prop_moneybag" );
 	moneybag:SetModel( "models/notes.mdl" )
 	moneybag:SetPos( tr.HitPos );
 	moneybag:Spawn();
 	moneybag:SetColor(200,255,200,255)
-	
+
 	moneybag:GetTable().MoneyBag = true;
 	moneybag:GetTable().Amount = amount;
-	
+
 	return "";
 
 end
@@ -1394,56 +1394,56 @@ AddChatCommand( "/dropmoney", DropMoney );
 function GM:PlayerSpawnProp( ply, model )
 	ply:ClearAFK()
 	if( not self.BaseClass:PlayerSpawnProp( ply, model ) ) then return false; end
-	
+
 	local allowed = false;
-	
+
 	if( ply:GetTable().Arrested ) then return false; end
-	if (ply:GetNWBool("shitwelding")) then 
+	if (ply:GetNWBool("shitwelding")) then
 		Notify(ply, 4, 3, "You cannot spawn props when people have welded your stuff or have recently bombed you!")
 		return false;
 	end
-	
+
 		for k, v in pairs( AllowedProps ) do
-		
+
 			if( v == model ) then allowed = true; end
-		
+
 		end
-		
+
 	if( CfgVars["banprops"] == 1 ) then
-	
+
 		for k, v in pairs( BannedProps ) do
 			if( string.lower(v) == string.lower(model) ) then return false; end
-		
+
 		end
-		
+
 	end
-	
+
 	if( allowed ) then
-	
+
 		if( CfgVars["proppaying"] == 1 ) then
-		
+
 			if( ply:CanAfford( CfgVars["propcost"] ) ) then
-			
+
 				Notify( ply, 0, 4, "Deducted $" .. CfgVars["propcost"] );
 				ply:AddMoney( -CfgVars["propcost"] );
-				
+
 				return true;
-			
+
 			else
-			
+
 				Notify( ply, 4, 4, "Need $" .. CfgVars["propcost"] );
 				return false;
-			
+
 			end
-		
+
 		else
-		
+
 			return true;
-		
+
 		end
-	
+
 	end
-		
+
 	return true;
 
 end
@@ -1467,11 +1467,11 @@ function GM:SetupMove( ply, move )
 		ply:GetTable().Jump2 = false
 	end
 	if( ply:GetTable().Arrested) then
-	
+
 		ply:SetWalkSpeed(100)
 		ply:SetRunSpeed(90)
-		return;	
-	
+		return;
+
 	end
 	if ( ply:GetTable().Roided) then
 		ply:SetWalkSpeed(330-(ply:GetTable().StunDuration)*2)
@@ -1490,44 +1490,44 @@ function GM:ShowSpare1( ply )
 end
 
 function GM:ShowSpare2( ply )
-	
+
 	local trace = ply:GetEyeTrace();
-	
+
 	if( trace.Entity:IsValid() and trace.Entity:IsOwnable() and ply:GetPos():Distance( trace.Entity:GetPos() ) < 115 ) then
-	
+
 		if( trace.Entity:OwnedBy( ply ) ) then
 			Notify( ply, 0, 4, "You've unowned this door!" );
 			trace.Entity:UnOwn( ply );
 			ply:GetTable().Owned[trace.Entity:EntIndex()] = nil;
 			ply:GetTable().OwnedNum = ply:GetTable().OwnedNum - 1;
 		else
-			
+
 			if( trace.Entity:IsOwned() and not trace.Entity:AllowedToOwn( ply ) ) then
-			
+
 				Notify( ply, 4, 3, "Already owned" );
 				return;
-			
+
 			end
-			
+
 			if( not ply:CanAfford( CfgVars["doorcost"] ) ) then
-		
+
 				Notify( ply, 4, 4, "You cannot afford this!" );
 				return;
-		
+
 			end
-			
+
 			ply:AddMoney( CfgVars["doorcost"] * -1 );
-		
+
 			Notify( ply, 0, 4, "You've owned this door for " .. CfgVars["doorcost"] .. " bucks!" );
-			
+
 			trace.Entity:Own( ply );
-			
+
 			ply:GetTable().OwnedNum = ply:GetTable().OwnedNum + 1;
-			
+
 			ply:GetTable().Owned[trace.Entity:EntIndex()] = trace.Entity;
-			
+
 		end
-		
+
 	end
 
 end
@@ -1535,56 +1535,56 @@ end
 function GM:KeyPress( ply, code )
 	ply:ClearAFK()
 	self.BaseClass:KeyPress( ply, code );
-	
+
 	if( code == IN_JUMP && !ply:GetTable().Jump2 && !ply:IsOnGround() && ply:GetTable().DoubleJumped) then
 		ply:SetVelocity(ply:GetForward()*150+Vector(0,0,300))
 		ply:GetTable().Jump2 = true
 	end
-	
+
 	if( code == IN_USE ) then
-	
+
 		local trace = { }
-	
+
 		trace.start = ply:EyePos();
 		trace.endpos = trace.start + ply:GetAimVector() * 95;
 		trace.filter = ply;
-		
+
 		local tr = util.TraceLine( trace );
 
 		if( tr.Entity!=nil and ValidEntity(tr.Entity) and not ply:KeyDown( IN_ATTACK ) ) then
-		
+
 			if( tr.Entity:GetTable().Letter ) then
-	
+
 				umsg.Start( "ShowLetter", ply );
 					umsg.Short( tr.Entity:GetTable().type );
 					umsg.Vector( tr.Entity:GetPos() );
 					umsg.String( tr.Entity:GetTable().content );
 				umsg.End();
-			
+
 			end
 
 			if( tr.Entity:GetTable().MoneyBag ) then
-	
+
 				Notify( ply, 2, 4, "You found $" .. tr.Entity:GetTable().Amount );
 				ply:AddMoney( tr.Entity:GetTable().Amount );
 				ply:ConCommand("play chaching.mp3" )
 				tr.Entity:Remove();
-			
+
 			end
 			if( tr.Entity:GetTable().ScrapMetal ) then
-	
+
 				Notify( ply, 2, 4, "You found scrap metal worth $" .. tr.Entity:GetTable().Amount );
 				ply:AddMoney( tr.Entity:GetTable().Amount );
 				ply:ConCommand("play chaching.mp3" )
 				tr.Entity:Remove();
-			
+
 			end
 		else
-		
+
 			umsg.Start( "KillLetter", ply ); umsg.End();
-		
+
 		end
-	
+
 	end
 
 end
@@ -1613,9 +1613,9 @@ function GM:EntityTakeDamage(ply, inflictor, attacker, damage, dmginfo)
 		//dmginfo:ScaleDamage(0.675)
 		scaler = scaler*.675
 	end
-	
+
 	// fuck the mingebags and thier propfaggotry. only thing that would be left is prop pushing, but at least you dont die and lose your gun.
-	
+
 	if (attacker!=nil && attacker:IsPlayer()==false) then
 		local class = attacker:GetClass()
 		local donotwant = false
@@ -1626,13 +1626,13 @@ function GM:EntityTakeDamage(ply, inflictor, attacker, damage, dmginfo)
 			if (class==v && v!="bigbomb") || (class==v && v=="bigbomb" && !dmginfo:IsExplosionDamage()) || (inflictor:IsWorld() && !dmginfo:IsFallDamage()) then
 				donotwant = true
 			end
-		end 
+		end
 		if donotwant then
 			//dmginfo:ScaleDamage(0)
 			scaler = 0
 		end
 	end
-	
+
 	if (inflictor!=nil && inflictor:IsPlayer()==false) then
 		local class = inflictor:GetClass()
 		local donotwant = false
@@ -1657,7 +1657,7 @@ function GM:EntityTakeDamage(ply, inflictor, attacker, damage, dmginfo)
 		ply:SetVelocity(knockdirection)
 		StunPlayer(ply, math.ceil(dmginfo:GetDamage()*0.1))
 	end
-	
+
 	local tdamage = damage*scaler
 	if !ply:IsPlayer() then return end
 	if (scaler>0 && tdamage>=(ply:Health()+ply:Armor()) && ply:GetTable().Shielded) then
@@ -1696,13 +1696,13 @@ function BuyNWeapons( ply, args )
 	args = string.Explode(" ", args)
    	if( args[1] == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	local mult=1	
+	local mult=1
 	local tr = util.TraceLine( trace );
-	
+
 	if( args == "flashbang" || args == "stungrenade" || args == "stun" || args == "flash" ) then
 		// it may say flashbang, but these are stun nades now.
 		if( not ply:CanAfford( CfgVars["flashbangcost"]*mult ) ) then
@@ -1711,7 +1711,7 @@ function BuyNWeapons( ply, args )
 		end
 		ply:AddMoney( CfgVars["flashbangcost"]*mult * -1 );
 		Notify( ply, 0, 3, "You bought a stun grenades!" );
-		for i=-1, 1, 1 do 
+		for i=-1, 1, 1 do
 			local weapon = ents.CreateEx( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_eq_flashbang.mdl" );
 			weapon:SetNWString("weaponclass", "cse_eq_flashbang");
@@ -1725,7 +1725,7 @@ function BuyNWeapons( ply, args )
 		end
 		ply:AddMoney( CfgVars["gasgrenadecost"]*mult * -1 );
 		Notify( ply, 0, 3, "You bought a gas grenades!" );
-		for i=-1, 1, 1 do 
+		for i=-1, 1, 1 do
 			local weapon = ents.CreateEx( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_eq_smokegrenade.mdl" );
 			weapon:SetNWString("weaponclass", "weapon_gasgrenade");
@@ -1739,35 +1739,28 @@ function BuyNWeapons( ply, args )
 		end
 		ply:AddMoney( CfgVars["grenadecost"]*mult * -1 );
 		Notify( ply, 0, 3, "You bought a grenades!" );
-		for i=-3, 3, 1 do 
+		for i=-3, 3, 1 do
 			local weapon = ents.CreateEx( "spawned_weapon" );
 			weapon:SetModel( "models/weapons/w_eq_fraggrenade.mdl" );
-			weapon:SetNWString("weaponclass", "cse_eq_hegrenade");
-			weapon:SetPos( Vector(tr.HitPos.x, tr.HitPos.y + (i*10), tr.HitPos.z));
-			weapon:Spawn();
-		end
-	elseif( args == "molotov"  || args == "firebomb") then
-		Notify( ply, 0, 3, "Molotovs are disabled!" );
---		if( not ply:CanAfford( CfgVars["molotovcost"]*mult ) ) then
---			Notify( ply, 4, 3, "Cannot afford this" );
---			return "";
---		end
---		ply:AddMoney( -1000 );
---		Notify( ply, 0, 3, "You bought molotovs!" );
---		for i=-1, 1, 1 do 
---			local weapon = ents.CreateEx( "spawned_weapon" );
---			weapon:SetModel( "models/props_junk/garbage_glassbottle003a.mdl" );
---			weapon:SetNWString("weaponclass", "weapon_molotov");
---			weapon:SetPos( Vector(tr.HitPos.x, tr.HitPos.y + (i*10), tr.HitPos.z));
---			weapon:Spawn();
---		end
-	else
-		Notify( ply, 4, 3, "That's not an available weapon." );
+			weapon:SetNWString("weaponclass", "cse_eq_hegrenade"); weapon:SetPos( Vector(tr.HitPos.x, tr.HitPos.y + (i*10), tr.HitPos.z)); weapon:Spawn(); end elseif( args == "molotov"  || args == "firebomb") then Notify( ply, 0, 3, "Molotovs are disabled!" ); else Notify( ply, 4, 3, "That's not an available weapon." );
 	end
-	
+
 	return "";
 end
 AddChatCommand( "/buynade", BuyNWeapons );
+
+
+function ShowMeTheMoney( ply, args )
+  if( not ply:IsSuperAdmin() ) then
+    Notify( ply, 4, 3, "No Cheating!!!" );
+    return "";
+  end
+  ply:AddMoney( 100000 );
+  return "";
+end
+AddChatCommand( "/showmethemoney", ShowMeTheMoney );
+
+
 
 local function SpawnEnt()
 	if game.GetMap()=="basewars_ll_downtown" then
@@ -1777,7 +1770,7 @@ local function SpawnEnt()
 		WelcomeSign:Spawn();
 		WelcomeSign:SetColor(0, 0, 0, 1)
 		local phys = WelcomeSign:GetPhysicsObject()
-		
+
 		phys:EnableMotion(false)
 	end
 end

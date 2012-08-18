@@ -42,7 +42,7 @@ function ENT:OpenMenu( )
 	DTextEntry1:SetPos( 366, 141 );
 	DTextEntry1:SetText( "" );
 	DTextEntry1.OnEnter = function( ) end;
-	
+
 	DButton2 = vgui.Create( "DButton", DPanel1 );
 	DButton2:SetSize( 193, 51 );
 	DButton2:SetPos( 195, 40 );
@@ -58,4 +58,7 @@ hook.Add( "Think", "MoneyVaultUpdate", function( )
 		DLabel2:SetText( LocalPlayer( ):GetNWInt( "vaultamount", 0 ) );
 	end;
 end );
-usermessage.Hook( "MoneyVaultMenu", function( ) ENT:OpenMenu( ) end );
+
+usermessage.Hook( "MoneyVaultMenu", function( )
+  ENT:OpenMenu( )
+end );
