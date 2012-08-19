@@ -10,11 +10,11 @@ function Upgrade(ply, args)
 	args = Purify(args)
 	if( args != "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 150;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 	if (!ValidEntity(tr.Entity)) then
 		return "";
@@ -25,7 +25,7 @@ function Upgrade(ply, args)
 		ply:ConCommand( "play buttons/button10.wav" )
 		return "" ;
 	end
-	
+
 	if not (targent.Owner) then
 		Notify( ply, 4, 3, "You do not own this Structure!" );
 			ply:ConCommand( "play buttons/button10.wav" )
@@ -44,7 +44,7 @@ function Upgrade(ply, args)
 		Notify(ply, 4, 3, "This is already fully upgraded.")
 		return "" ;
 	end
-	
+
 	local price = 0
 	if targent:GetClass()== "auto_turret" then price = CfgVars["turretcost"]
 	elseif targent:GetClass()== "dispenser" then price = CfgVars["dispensercost"]
@@ -89,13 +89,13 @@ AddChatCommand( "/upgrade", Upgrade );
 function BuyRefinery( ply )
     if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
-	
+
 		if( not ply:CanAfford( CfgVars["drugfactorycost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
 			return "";
@@ -107,7 +107,7 @@ function BuyRefinery( ply )
 		ply:AddMoney( CfgVars["drugfactorycost"] * -1 );
 		Notify( ply, 0, 3, "You bought a Drug Refinery" );
 		local gunlab = ents.Create( "drugfactory" );
-		 
+
 		gunlab.Owner = ply
 		gunlab:SetPos( tr.HitPos+Vector(0,0,40));
 		gunlab:Spawn();
@@ -121,13 +121,13 @@ AddChatCommand( "/buydrugrefinery", BuyRefinery );
 function BuyMoneyVault( ply )
     if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
-	
+
 		if( not ply:CanAfford( 500 ) ) then
 			Notify( ply, 4, 3, "Cannot afford this Structure." );
 			return "";
@@ -139,7 +139,7 @@ function BuyMoneyVault( ply )
 		ply:AddMoney( CfgVars["drugfactorycost"] * -1 );
 		Notify( ply, 0, 3, "You bought a Money Vault!" );
 		local gunlab = ents.Create( "moneyvault" );
-		 
+
 		gunlab:SetPos( tr.HitPos+Vector(0,0,40));
 		gunlab.Owner = ply
 		gunlab:Spawn();
@@ -153,13 +153,13 @@ AddChatCommand( "/buymoneyvault", BuyMoneyVault );
 function BuyGunFactory( ply )
     if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
-		
+
 	if( not ply:CanAfford( CfgVars["gunfactorycost"] ) ) then
 		Notify( ply, 4, 3, "Cannot afford this" );
 		return "";
@@ -171,7 +171,7 @@ function BuyGunFactory( ply )
 	ply:AddMoney( CfgVars["gunfactorycost"] * -1 );
 	Notify( ply, 0, 3, "You bought a Gun Factory" );
 	local gunlab = ents.Create( "gunfactory" );
-	 
+
 	gunlab.Owner = ply
 	gunlab:SetPos( tr.HitPos+Vector(0,0,10));
 	gunlab:Spawn();
@@ -185,11 +185,11 @@ AddChatCommand( "/buyfactory", BuyGunFactory );
 function BuyTower( ply )
     if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 	if( not ply:CanAfford( CfgVars["radartowercost"] ) ) then
 		Notify( ply, 4, 3, "Cannot afford this" );
@@ -202,7 +202,7 @@ function BuyTower( ply )
 	ply:AddMoney( CfgVars["radartowercost"] * -1 );
 	Notify( ply, 0, 3, "You bought a Radar Tower" );
 	local gunlab = ents.Create( "radartower" );
-	 
+
 	gunlab.Owner = ply
 	gunlab:SetPos( tr.HitPos+Vector(0,0,10));
 	gunlab:Spawn();
@@ -214,11 +214,11 @@ AddChatCommand( "/buyradar", BuyTower );
 function BuySupplyTable( ply )
     if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 	if( not ply:CanAfford( 1000 )) then
 		Notify( ply, 4, 3, "Cannot afford this!" );
@@ -231,7 +231,7 @@ function BuySupplyTable( ply )
 	ply:AddMoney( -1000 );
 	Notify( ply, 0, 3, "You bought a Supply Table" );
 	local gunlab = ents.Create( "supplytable" );
-	 
+
 	gunlab:SetPos( tr.HitPos+Vector(0,0,10));
 	gunlab.Owner = ply
 	gunlab:Spawn();
@@ -245,13 +245,13 @@ AddChatCommand( "/buysupplycabinet", BuySupplyTable );
 function BuyGenerator( ply )
     if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
-		
+
 		if( not ply:CanAfford( CfgVars["generatorcost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
 			return "";
@@ -263,7 +263,7 @@ function BuyGenerator( ply )
 		ply:AddMoney( CfgVars["generatorcost"] * -1 );
 		Notify( ply, 0, 3, "You bought a Power Plant" );
 		local gunlab = ents.Create( "powerplant" );
-		 
+
 		gunlab:SetPos( tr.HitPos+Vector(0,0,10));
 		gunlab.Owner = ply
 		gunlab:Spawn();
@@ -273,34 +273,35 @@ AddChatCommand( "/buypowerplant", BuyGenerator );
 AddChatCommand( "/buygenerator", BuyGenerator );
 
 function BuySuperGenerator( ply )
-			Notify( ply, 4, 3, "Super Generator has been disabled!" );
+	//Notify( ply, 4, 3, "Super Generator has been disabled!" );
 
-    if( args == "" ) then return ""; end
+  if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
-		
-		if( not ply:CanAfford( CfgVars["supergeneratorcost"] ) ) then
-			Notify( ply, 4, 3, "Cannot afford this" );
-			return "";
-		end
-		if(ply:GetTable().maxgenerator >= CfgVars["maxgenerator"])then
-			Notify( ply, 4, 3, "Max Super Power Plants Reached!" );
-			return "";
-		end
-		ply:AddMoney( CfgVars["supergeneratorcost"] * -1 );
-		Notify( ply, 0, 3, "You bought a Super Power Plant" );
-		local gunlab = ents.Create( "superpowerplant" );
-		 
-		gunlab:SetPos( tr.HitPos+Vector(0,0,10));
-		gunlab.Owner = ply
-		gunlab:Spawn();
-		return "";
+
+  if( not ply:CanAfford( CfgVars["supergeneratorcost"] ) ) then
+    Notify( ply, 4, 3, "Cannot afford this" );
+    return "";
+  end
+  if(ply:GetTable().maxgenerator >= CfgVars["maxgenerator"])then
+    Notify( ply, 4, 3, "Max Super Power Plants Reached!" );
+    return "";
+  end
+  ply:AddMoney( CfgVars["supergeneratorcost"] * -1 );
+  Notify( ply, 0, 3, "You bought a Super Power Plant" );
+  local gunlab = ents.Create( "superpowerplant" );
+
+  gunlab:SetPos( tr.HitPos+Vector(0,0,10));
+  gunlab.Owner = ply
+  gunlab:Spawn();
+  return "";
 end
+
 AddChatCommand( "/buysuperpowerplant", BuySuperGenerator );
 AddChatCommand( "/buysupergenerator", BuySuperGenerator );
 
@@ -309,11 +310,11 @@ AddChatCommand( "/buysupergenerator", BuySuperGenerator );
 function BuyBomb( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 	if( not ply:CanAfford( CfgVars["bigbombcost"] ) ) then
 		Notify( ply, 4, 3, "Cannot afford this!" );
@@ -341,11 +342,11 @@ AddChatCommand( "/buybomb", BuyBomb );
 function BuyPBomb( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 	if( not ply:CanAfford( CfgVars["pipebombcost"] ) ) then
 		Notify( ply, 4, 3, "Cannot afford this" );
@@ -377,7 +378,7 @@ function BuyKnife( ply )
 		end
 		ply:AddMoney( CfgVars["knifecost"] * -1 );
 		Notify( ply, 0, 3, "You bought a knife" );
-		
+
 		ply:Give("weapon_knife2")
 		return "";
 end
@@ -396,7 +397,7 @@ function BuyLockPick( ply )
 		end
 		ply:AddMoney( CfgVars["lockpickcost"] * -1 );
 		Notify( ply, 0, 3, "You bought a lockpick" );
-		
+
 		ply:Give("lockpick")
 		return "";
 end
@@ -419,7 +420,7 @@ function BuyWelder( ply )
 		end
 		ply:AddMoney( CfgVars["weldercost"] * -1 );
 		Notify( ply, 0, 3, "You bought a blowtorch/welder" );
-		
+
 		ply:Give("weapon_welder")
 		return "";
 end
@@ -430,11 +431,11 @@ AddChatCommand( "/buyblowtorch", BuyWelder );
 
 function BuyTurret( ply )
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 150;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if (CfgVars["allowturrets"] == 0) then
 			Notify( ply, 4, 3, "Sentry turrets have been disabled!");
@@ -466,11 +467,11 @@ function BuyTurret( ply )
 		end
 		ply:AddMoney( CfgVars["turretcost"] * -1 );
 		Notify( ply, 0, 3, "You bought a Sentry turret" );
-		
+
 		local ent = ents.Create( "auto_turret" )
 		ent:SetPos( SpawnPos + (tr.HitNormal*-3) )
 		ent:SetAngles( SpawnAng + Angle(90, 0, 0) )
- 
+
 		ent.Owner = ply
 		ent:SetNWString( "ally" , "")
 		ent:SetNWString( "jobally", "")
@@ -496,11 +497,11 @@ AddChatCommand( "/buyturret", BuyTurret );
 
 function BuyDispenser( ply )
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 150;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if (CfgVars["allowdispensers"] == 0) then
 			Notify( ply, 4, 3, "Ammo dispensers have been disabled!");
@@ -521,10 +522,10 @@ function BuyDispenser( ply )
 		local SpawnPos = tr.HitPos + tr.HitNormal * 20
 		ply:AddMoney( CfgVars["dispensercost"] * -1 );
 		Notify( ply, 0, 3, "You bought an ammo dispenser" );
-		
+
 		local ent = ents.Create( "dispenser" )
 		ent:SetPos( SpawnPos + Vector(0,0,30) )
- 
+
 		ent.Owner = ply
 		ent:Spawn()
 		ent:Activate()
@@ -540,11 +541,11 @@ function BuyMethlab( ply,args )
 	if count==nil then count = 1 end
 	if count>CfgVars["maxmethlab"] || count<1 then count = 1 end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 150;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 	if ( ply:GetTable().Arrested ) then
 		Notify( ply, 4, 3, "You can't buy a methlab while arrested!" );
@@ -562,10 +563,10 @@ function BuyMethlab( ply,args )
 		local SpawnPos = tr.HitPos + tr.HitNormal * 20
 		ply:AddMoney( CfgVars["methlabcost"] * -1 );
 		Notify( ply, 0, 3, "You bought a meth lab. Good luck!" );
-		
+
 		local ent = ents.Create( "meth_lab" )
 		ent:SetPos( SpawnPos + Vector(0,0,10) )
- 
+
 		ent.Owner = ply
 		ent:Spawn()
 		ent:SetColor(255, 255, 255, 255)
@@ -579,13 +580,13 @@ function BuyStableMethLab( ply )
 	args = Purify(args)
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
-		
+
 		if( not ply:CanAfford( CfgVars["metlabstable"] )) then
 			Notify( ply, 4, 3, "Cannot afford this" );
 			return "";
@@ -597,7 +598,7 @@ function BuyStableMethLab( ply )
 		ply:AddMoney( -CfgVars["metlabstable"] );
 		Notify( ply, 0, 3, "You bought a Stable Meth Labs" );
 		local druglab = ents.Create( "meth_lab_stable" );
- 
+
 		druglab.Owner = ply
 		druglab:SetPos( tr.HitPos + tr.HitNormal*148);
 		druglab:Spawn();
@@ -614,11 +615,11 @@ function BuyPlant( ply,args )
 --	if count==nil then count = 1 end
 --	if count>CfgVars["maxweed"] || count<1 then count = 1 end
 --	local trace = { }
---	
+--
 --	trace.start = ply:EyePos();
 --	trace.endpos = trace.start + ply:GetAimVector() * 150;
 --	trace.filter = ply;
---	
+--
 --	local tr = util.TraceLine( trace );
 --		if ( ply:GetTable().Arrested ) then
 --			Notify( ply, 4, 3, "You can't buy a plant while arrested!" );
@@ -636,10 +637,10 @@ function BuyPlant( ply,args )
 --		local SpawnPos = tr.HitPos + tr.HitNormal * 20
 --		ply:AddMoney( CfgVars["weedcost"] * -1 );
 --		Notify( ply, 0, 3, "You bought a plant!" );
---		
+--
 --		local ent = ents.Create( "weedplant" )
 --		ent:SetPos( SpawnPos + Vector(0,0,20) )
--- 
+--
 --		ent:Spawn()
 --		ent:Activate()
 --		if (math.Rand(0,1)>.75) then
@@ -654,7 +655,7 @@ AddChatCommand( "/buyweed", BuyPlant );
 AddChatCommand( "/buyweedplant", BuyPlant );
 
 function BuySpawn( ply )
-    
+
     if( args == "" ) then return ""; end
     	local trace = { }
     		trace.start = ply:GetPos()+Vector(0,0,1)
@@ -715,11 +716,11 @@ function TargetTurret(ply, args)
 	args = Purify(args)
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 150;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 	local targent = tr.Entity
 	if (targent:GetClass()!="auto_turret") then
@@ -740,11 +741,11 @@ end
 function BuyArmor( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if (CfgVars["hltvproxywashere"] == 0) then
 			Notify( ply, 4, 3, "BuyArmor has been disabled!");
@@ -768,11 +769,11 @@ AddChatCommand( "/buyarmor", BuyArmor );
 function BuyHelmet( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if( not ply:CanAfford( 250 ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -792,11 +793,11 @@ AddChatCommand( "/buyhelmet", BuyHelmet );
 function BuyToolKit( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if( not ply:CanAfford( CfgVars["toolkitcost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -816,11 +817,11 @@ AddChatCommand( "/buytoolkit", BuyToolKit );
 function BuyScanner( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if( not ply:CanAfford( CfgVars["scannercost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -840,11 +841,11 @@ AddChatCommand( "/buyscanner", BuyScanner );
 function BuyShield( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if (CfgVars["allowsteroids"] == 0) then
 			Notify( ply, 4, 3, "BuyShield has been disabled!");
@@ -864,16 +865,16 @@ end
 AddChatCommand( "/buyshield", BuyShield );
 
 
-// steroid 
+// steroid
 
 function BuyBatchSteroid( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if (4 * CfgVars["allowsteroids"] == 0) then
 			Notify( ply, 4, 3, "BuyBatchSteroids has been disabled!");
@@ -885,7 +886,7 @@ function BuyBatchSteroid( ply )
 		end
 		ply:AddMoney( 4 * CfgVars["steroidcost"] * -1 );
 		Notify( ply, 0, 3, "You bought a batch of steroids" );
-		for i=-2, 2, 1 do 
+		for i=-2, 2, 1 do
 			local vehiclespawn = ents.CreateEx( "item_steroid" );
 			vehiclespawn:SetPos( tr.HitPos + Vector(0, i*12, 15));
 			vehiclespawn:Spawn();
@@ -894,16 +895,16 @@ function BuyBatchSteroid( ply )
 end
 AddChatCommand( "/buybatchsteroids", BuyBatchSteroid );
 
-// doublejump 
+// doublejump
 
 function BuyBatchDoubleJump( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if( not ply:CanAfford( 4 * CfgVars["doublejumpcost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -911,7 +912,7 @@ function BuyBatchDoubleJump( ply )
 		end
 		ply:AddMoney( 4 * CfgVars["doublejumpcost"] * -1 );
 		Notify( ply, 0, 3, "You bought a batch of double jump" );
-		for i=-2, 2, 1 do 
+		for i=-2, 2, 1 do
 			local vehiclespawn = ents.CreateEx( "item_doublejump" );
 			vehiclespawn:SetPos( tr.HitPos + Vector(0, i*12, 15));
 			vehiclespawn:Spawn();
@@ -920,16 +921,16 @@ function BuyBatchDoubleJump( ply )
 end
 AddChatCommand( "/buybatchdoublejump", BuyBatchDoubleJump );
 
-// adrenaline 
+// adrenaline
 
 function BuyBatchAdrenaline( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if( not ply:CanAfford( 4 * CfgVars["adrenalinecost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -937,7 +938,7 @@ function BuyBatchAdrenaline( ply )
 		end
 		ply:AddMoney( 4 * CfgVars["adrenalinecost"] * -1 );
 		Notify( ply, 0, 3, "You bought a batch of adrenaline" );
-		for i=-2, 2, 1 do 
+		for i=-2, 2, 1 do
 			local vehiclespawn = ents.CreateEx( "item_adrenaline" );
 			vehiclespawn:SetPos( tr.HitPos + Vector(0, i*12, 15));
 			vehiclespawn:Spawn();
@@ -946,16 +947,16 @@ function BuyBatchAdrenaline( ply )
 end
 AddChatCommand( "/buybatchadrenaline", BuyBatchAdrenaline );
 
-// knockback 
+// knockback
 
 function BuyBatchKnockback( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if( not ply:CanAfford( 4 * CfgVars["knockbackcost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -963,7 +964,7 @@ function BuyBatchKnockback( ply )
 		end
 		ply:AddMoney( 4 * CfgVars["knockbackcost"] * -1 );
 		Notify( ply, 0, 3, "You bought a batch of knockback" );
-		for i=-2, 2, 1 do 
+		for i=-2, 2, 1 do
 			local vehiclespawn = ents.CreateEx( "item_knockback" );
 			vehiclespawn:SetPos( tr.HitPos + Vector(0, i*12, 15));
 			vehiclespawn:Spawn();
@@ -977,11 +978,11 @@ AddChatCommand( "/buybatchknockback", BuyBatchKnockback );
 function BuyBatchArmorpiercer( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if( not ply:CanAfford( 4 * CfgVars["armorpiercercost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -989,7 +990,7 @@ function BuyBatchArmorpiercer( ply )
 		end
 		ply:AddMoney( 4 * CfgVars["armorpiercercost"] * -1 );
 		Notify( ply, 0, 3, "You bought a batch of armorpiercer" );
-		for i=-2, 2, 1 do 
+		for i=-2, 2, 1 do
 			local vehiclespawn = ents.CreateEx( "item_armorpiercer" );
 			vehiclespawn:SetPos( tr.HitPos + Vector(0, i*12, 15));
 			vehiclespawn:Spawn();
@@ -1000,16 +1001,16 @@ AddChatCommand( "/buybatchapiercer", BuyBatchArmorpiercer );
 AddChatCommand( "/buybatchpiercer", BuyBatchArmorpiercer );
 AddChatCommand( "/buybatcharmorpiercer", BuyBatchArmorpiercer );
 
-// shockwave 
+// shockwave
 
 function BuyBatchShockWave( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if( not ply:CanAfford( 4 * CfgVars["shockwavecost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -1017,7 +1018,7 @@ function BuyBatchShockWave( ply )
 		end
 		ply:AddMoney( 4 * CfgVars["shockwavecost"] * -1 );
 		Notify( ply, 0, 3, "You bought a batch of shock wave" );
-		for i=-2, 2, 1 do 
+		for i=-2, 2, 1 do
 			local vehiclespawn = ents.CreateEx( "item_shockwave" );
 			vehiclespawn:SetPos( tr.HitPos + Vector(0, i*12, 15));
 			vehiclespawn:Spawn();
@@ -1026,16 +1027,16 @@ function BuyBatchShockWave( ply )
 end
 AddChatCommand( "/buybatchshockwave", BuyBatchShockWave );
 
-// leech 
+// leech
 
 function BuyBatchLeech( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if( not ply:CanAfford( 4 * CfgVars["leechcost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -1043,7 +1044,7 @@ function BuyBatchLeech( ply )
 		end
 		ply:AddMoney( 4 * CfgVars["leechcost"] * -1 );
 		Notify( ply, 0, 3, "You bought a batch of leech" );
-		for i=-2, 2, 1 do 
+		for i=-2, 2, 1 do
 			local vehiclespawn = ents.CreateEx( "item_leech" );
 			vehiclespawn:SetPos( tr.HitPos + Vector(0, i*12, 15));
 			vehiclespawn:Spawn();
@@ -1052,16 +1053,16 @@ function BuyBatchLeech( ply )
 end
 AddChatCommand( "/buybatchleech", BuyBatchLeech );
 
-// double tap 
+// double tap
 
 function BuyBatchDoubleTap( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if( not ply:CanAfford( 4 * CfgVars["doubletapcost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -1069,7 +1070,7 @@ function BuyBatchDoubleTap( ply )
 		end
 		ply:AddMoney( 4 * CfgVars["doubletapcost"] * -1 );
 		Notify( ply, 0, 3, "You bought a batch of double tap" );
-		for i=-2, 2, 1 do 
+		for i=-2, 2, 1 do
 			local vehiclespawn = ents.CreateEx( "item_doubletap" );
 			vehiclespawn:SetPos( tr.HitPos + Vector(0, i*12, 15));
 			vehiclespawn:Spawn();
@@ -1078,16 +1079,16 @@ function BuyBatchDoubleTap( ply )
 end
 AddChatCommand( "/buybatchdoubletap", BuyBatchDoubleTap );
 
-// reflect 
+// reflect
 
 function BuyBatchReflect( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if (4 * CfgVars["allowreflect"] == 0) then
 			Notify( ply, 4, 3, "BuyBatchReflect has been disabled!");
@@ -1099,7 +1100,7 @@ function BuyBatchReflect( ply )
 		end
 		ply:AddMoney( 4 * CfgVars["reflectcost"] * -1 );
 		Notify( ply, 0, 3, "You bought a batch of reflect" );
-		for i=-2, 2, 1 do 
+		for i=-2, 2, 1 do
 			local vehiclespawn = ents.CreateEx( "item_reflect" );
 			vehiclespawn:SetPos( tr.HitPos + Vector(0, i*12, 15));
 			vehiclespawn:Spawn();
@@ -1108,16 +1109,16 @@ function BuyBatchReflect( ply )
 end
 AddChatCommand( "/buybatchreflect", BuyBatchReflect );
 
-// focus 
+// focus
 
 function BuyBatchFocus( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if (4 * CfgVars["allowfocus"] == 0) then
 			Notify( ply, 4, 3, "BuyBatchFocus has been disabled!");
@@ -1129,7 +1130,7 @@ function BuyBatchFocus( ply )
 		end
 		ply:AddMoney( 4 * CfgVars["focuscost"] * -1 );
 		Notify( ply, 0, 3, "You bought a batch of focus" );
-		for i=-2, 2, 1 do 
+		for i=-2, 2, 1 do
 			local vehiclespawn = ents.CreateEx( "item_focus" );
 			vehiclespawn:SetPos( tr.HitPos + Vector(0, i*12, 15));
 			vehiclespawn:Spawn();
@@ -1138,16 +1139,16 @@ function BuyBatchFocus( ply )
 end
 AddChatCommand( "/buybatchfocus", BuyBatchFocus );
 
-// antidote 
+// antidote
 
 function BuyBatchAntidote( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if (4 * CfgVars["allowantidote"] == 0) then
 			Notify( ply, 4, 3, "BuyBatchAntidote has been disabled!");
@@ -1159,7 +1160,7 @@ function BuyBatchAntidote( ply )
 		end
 		ply:AddMoney( 4 * CfgVars["antidotecost"] * -1 );
 		Notify( ply, 0, 3, "You bought a batch of antidote" );
-		for i=-2, 2, 1 do 
+		for i=-2, 2, 1 do
 			local vehiclespawn = ents.CreateEx( "item_antidote" );
 			vehiclespawn:SetPos( tr.HitPos + Vector(0, i*12, 15));
 			vehiclespawn:Spawn();
@@ -1168,16 +1169,16 @@ function BuyBatchAntidote( ply )
 end
 AddChatCommand( "/buybatchantidote", BuyBatchAntidote );
 
-// Amplifier 
+// Amplifier
 
 function BuyBatchAmp( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if (4 * CfgVars["allowamp"] == 0) then
 			Notify( ply, 4, 3, "BuyBatchAmplifier has been disabled!");
@@ -1189,7 +1190,7 @@ function BuyBatchAmp( ply )
 		end
 		ply:AddMoney( 4 * CfgVars["ampcost"] * -1 );
 		Notify( ply, 0, 3, "You bought a batch of amplifier" );
-		for i=-2, 2, 1 do 
+		for i=-2, 2, 1 do
 			local vehiclespawn = ents.CreateEx( "item_amp" );
 			vehiclespawn:SetPos( tr.HitPos + Vector(0, i*12, 15));
 			vehiclespawn:Spawn();
@@ -1198,15 +1199,15 @@ function BuyBatchAmp( ply )
 end
 AddChatCommand( "/buybatchamp", BuyBatchAmp );
 
-// pain killer 
+// pain killer
 function BuyBatchPainKiller( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if (4 * CfgVars["allowpainkiller"] == 0) then
 			Notify( ply, 4, 3, "BuyBatchPainKiller has been disabled!");
@@ -1218,7 +1219,7 @@ function BuyBatchPainKiller( ply )
 		end
 		ply:AddMoney( 4 * CfgVars["painkillercost"] * -1 );
 		Notify( ply, 0, 3, "You bought a batch of pain killers" );
-		for i=-2, 2, 1 do 
+		for i=-2, 2, 1 do
 			local vehiclespawn = ents.CreateEx( "item_painkiller" );
 			vehiclespawn:SetPos( tr.HitPos + Vector(0, i*12, 15));
 			vehiclespawn:Spawn();
@@ -1228,15 +1229,15 @@ end
 AddChatCommand( "/buybatchpainkiller", BuyBatchPainKiller );
 AddChatCommand( "/buybatchpainkillers", BuyBatchPainKiller );
 
-// magic bullet 
+// magic bullet
 function BuyBatchMagicBullet( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if( not ply:CanAfford( 4 * CfgVars["magicbulletcost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -1244,7 +1245,7 @@ function BuyBatchMagicBullet( ply )
 		end
 		ply:AddMoney( 4 * CfgVars["magicbulletcost"] * -1 );
 		Notify( ply, 0, 3, "You bought a batch of magic bullet" );
-		for i=-2, 2, 1 do 
+		for i=-2, 2, 1 do
 			local vehiclespawn = ents.CreateEx( "item_magicbullet" );
 			vehiclespawn:SetPos( tr.HitPos + Vector(0, i*12, 15));
 			vehiclespawn:Spawn();
@@ -1254,16 +1255,16 @@ end
 AddChatCommand( "/buybatchmagicbullet", BuyBatchMagicBullet );
 AddChatCommand( "/buybatchmb", BuyBatchMagicBullet );
 
-// regeneration 
+// regeneration
 
 function BuyBatchRegen( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if (4 * CfgVars["allowregen"] == 0) then
 			Notify( ply, 4, 3, "BuyBatchRegen has been disabled!");
@@ -1275,7 +1276,7 @@ function BuyBatchRegen( ply )
 		end
 		ply:AddMoney( 4 * CfgVars["regencost"] * -1 );
 		Notify( ply, 0, 3, "You bought a batch of regeneration" );
-		for i=-2, 2, 1 do 
+		for i=-2, 2, 1 do
 			local vehiclespawn = ents.CreateEx( "item_regen" );
 			vehiclespawn:SetPos( tr.HitPos + Vector(0, i*12, 15));
 			vehiclespawn:Spawn();
@@ -1285,16 +1286,16 @@ end
 AddChatCommand( "/buybatchregen", BuyBatchRegen );
 
 ----------------------End of Batch
-// steroid 
+// steroid
 
 function BuySteroid( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if (CfgVars["allowsteroids"] == 0) then
 			Notify( ply, 4, 3, "BuySteroids has been disabled!");
@@ -1315,16 +1316,16 @@ function BuySteroid( ply )
 end
 AddChatCommand( "/buysteroids", BuySteroid );
 
-// doublejump 
+// doublejump
 
 function BuyDoubleJump( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if( not ply:CanAfford( CfgVars["doublejumpcost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -1341,16 +1342,16 @@ function BuyDoubleJump( ply )
 end
 AddChatCommand( "/buydoublejump", BuyDoubleJump );
 
-// adrenaline 
+// adrenaline
 
 function BuyAdrenaline( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if( not ply:CanAfford( CfgVars["adrenalinecost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -1367,16 +1368,16 @@ function BuyAdrenaline( ply )
 end
 AddChatCommand( "/buyadrenaline", BuyAdrenaline );
 
-// knockback 
+// knockback
 
 function BuyKnockback( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if( not ply:CanAfford( CfgVars["knockbackcost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -1398,11 +1399,11 @@ AddChatCommand( "/buyknockback", BuyKnockback );
 function BuyArmorpiercer( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if( not ply:CanAfford( CfgVars["armorpiercercost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -1421,16 +1422,16 @@ AddChatCommand( "/buyapiercer", BuyArmorpiercer );
 AddChatCommand( "/buypiercer", BuyArmorpiercer );
 AddChatCommand( "/buyarmorpiercer", BuyArmorpiercer );
 
-// shockwave 
+// shockwave
 
 function BuyShockWave( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if( not ply:CanAfford( CfgVars["shockwavecost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -1447,16 +1448,16 @@ function BuyShockWave( ply )
 end
 AddChatCommand( "/buyshockwave", BuyShockWave );
 
-// leech 
+// leech
 
 function BuyLeech( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if( not ply:CanAfford( CfgVars["leechcost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -1473,16 +1474,16 @@ function BuyLeech( ply )
 end
 AddChatCommand( "/buyleech", BuyLeech );
 
-// double tap 
+// double tap
 
 function BuyDoubleTap( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if( not ply:CanAfford( CfgVars["doubletapcost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -1499,16 +1500,16 @@ function BuyDoubleTap( ply )
 end
 AddChatCommand( "/buydoubletap", BuyDoubleTap );
 
-// reflect 
+// reflect
 
 function BuyReflect( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if (CfgVars["allowreflect"] == 0) then
 			Notify( ply, 4, 3, "BuyReflect has been disabled!");
@@ -1529,16 +1530,16 @@ function BuyReflect( ply )
 end
 AddChatCommand( "/buyreflect", BuyReflect );
 
-// focus 
+// focus
 
 function BuyFocus( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if (CfgVars["allowfocus"] == 0) then
 			Notify( ply, 4, 3, "BuyFocus has been disabled!");
@@ -1559,16 +1560,16 @@ function BuyFocus( ply )
 end
 AddChatCommand( "/buyfocus", BuyFocus );
 
-// antidote 
+// antidote
 
 function BuyAntidote( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if (CfgVars["allowantidote"] == 0) then
 			Notify( ply, 4, 3, "BuyAntidote has been disabled!");
@@ -1589,16 +1590,16 @@ function BuyAntidote( ply )
 end
 AddChatCommand( "/buyantidote", BuyAntidote );
 
-// Amplifier 
+// Amplifier
 
 function BuyAmp( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if (CfgVars["allowamp"] == 0) then
 			Notify( ply, 4, 3, "BuyAmplifier has been disabled!");
@@ -1619,15 +1620,15 @@ function BuyAmp( ply )
 end
 AddChatCommand( "/buyamp", BuyAmp );
 
-// pain killer 
+// pain killer
 function BuyPainKiller( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if (CfgVars["allowpainkiller"] == 0) then
 			Notify( ply, 4, 3, "BuyPainKiller has been disabled!");
@@ -1649,15 +1650,15 @@ end
 AddChatCommand( "/buypainkiller", BuyPainKiller );
 AddChatCommand( "/buypainkillers", BuyPainKiller );
 
-// magic bullet 
+// magic bullet
 function BuyMagicBullet( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if( not ply:CanAfford( CfgVars["magicbulletcost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
@@ -1675,16 +1676,16 @@ end
 AddChatCommand( "/buymagicbullet", BuyMagicBullet );
 AddChatCommand( "/buymb", BuyMagicBullet );
 
-// regeneration 
+// regeneration
 
 function BuyRegen( ply )
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 		if (CfgVars["allowregen"] == 0) then
 			Notify( ply, 4, 3, "BuyRegen has been disabled!");
@@ -1713,13 +1714,13 @@ function BuyBronzePrinter( ply )
 	args = Purify(args)
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
-		
+
 		if( not ply:CanAfford( CfgVars["bronzeprintercost"] )) then
 			Notify( ply, 4, 3, "Cannot afford this" );
 			return "";
@@ -1731,7 +1732,7 @@ function BuyBronzePrinter( ply )
 		ply:AddMoney( -CfgVars["bronzeprintercost"] );
 		Notify( ply, 0, 3, "You bought a Bronze Printer" );
 		local druglab = ents.Create( "money_printer_bronze" );
- 
+
 		druglab:SetMaterial( "models/shiny" )
 		druglab:SetColor(140, 120, 83, 255)
 		druglab:SetPos( tr.HitPos + tr.HitNormal*30);
@@ -1745,13 +1746,13 @@ function BuySilverPrinter( ply )
 	args = Purify(args)
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
-		
+
 		if( not ply:CanAfford( CfgVars["silverprintercost"] )) then
 			Notify( ply, 4, 3, "Cannot afford this." );
 			return "";
@@ -1763,7 +1764,7 @@ function BuySilverPrinter( ply )
 		ply:AddMoney( -CfgVars["silverprintercost"] );
 		Notify( ply, 0, 3, "You bought a Silver Printer" );
 		local druglab = ents.Create( "money_printer_silver" );
- 
+
 		druglab:SetMaterial( "models/shiny" )
 		druglab:SetColor(230, 232, 250, 255)
 		druglab:SetPos( tr.HitPos + tr.HitNormal*40);
@@ -1778,13 +1779,13 @@ function BuyGoldPrinter( ply )
 	args = Purify(args)
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
-		
+
 		if( not ply:CanAfford( CfgVars["goldprintercost"] )) then
 			Notify( ply, 4, 3, "Cannot afford this" );
 			return "";
@@ -1796,7 +1797,7 @@ function BuyGoldPrinter( ply )
 		ply:AddMoney( -CfgVars["goldprintercost"] );
 		Notify( ply, 0, 3, "You bought a Gold Printer" );
 		local druglab = ents.Create( "money_printer_gold" );
- 
+
 		druglab:SetMaterial( "models/shiny" )
 		druglab:SetColor(255, 215, 0, 255)
 		druglab:SetPos( tr.HitPos + tr.HitNormal*40);
@@ -1810,13 +1811,13 @@ function BuyPlatinumPrinter( ply )
 	args = Purify(args)
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
-		
+
 		if( not ply:CanAfford( CfgVars["platinumprintercost"] )) then
 			Notify( ply, 4, 3, "Cannot afford this" );
 			return "";
@@ -1828,7 +1829,7 @@ function BuyPlatinumPrinter( ply )
 		ply:AddMoney( -CfgVars["platinumprintercost"] );
 		Notify( ply, 0, 3, "You bought a Platinum Printer" );
 		local druglab = ents.Create( "money_printer_platinum" );
- 
+
 		druglab:SetMaterial( "models/shiny" )
 		druglab:SetColor(229, 228, 226, 255)
 		druglab:SetPos( tr.HitPos + tr.HitNormal*50);
@@ -1842,13 +1843,13 @@ function BuyDiamondPrinter( ply )
 	args = Purify(args)
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
-		
+
 		if( not ply:CanAfford( CfgVars["diamondprintercost"] )) then
 			Notify( ply, 4, 3, "Cannot afford this" );
 			return "";
@@ -1860,7 +1861,7 @@ function BuyDiamondPrinter( ply )
 		ply:AddMoney( -CfgVars["diamondprintercost"] );
 		Notify( ply, 0, 3, "You bought a Diamond Printer" );
 		local druglab = ents.Create( "money_printer_diamond" );
- 
+
 		druglab:SetMaterial( "models/shiny" )
 		druglab:SetColor(229, 228, 226, 255)
 		druglab:SetPos( tr.HitPos + tr.HitNormal*50);
@@ -1886,13 +1887,13 @@ local nuclearmax = false
 	args = Purify(args)
 	if( args == "" ) then return ""; end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
-		
+
 		if( not ply:CanAfford( CfgVars["nukeprintercost"] )) then
 			Notify( ply, 4, 3, "Cannot afford this" );
 			return "";
@@ -1904,7 +1905,7 @@ local nuclearmax = false
 		ply:AddMoney( -CfgVars["nukeprintercost"] );
 		Notify( ply, 0, 3, "You bought a Nuclear Money Printer, Take Cover!" );
 		local druglab = ents.Create( "money_printer_nuclear" );
- 
+
 		druglab:SetPos( tr.HitPos + tr.HitNormal*70);
 		druglab:SetColor(255, 255, 255, 255)
 		druglab.Owner = ply
@@ -1921,13 +1922,13 @@ function BuyWashingMachinePrinter( ply )
 --	args = Purify(args)
 --	if( args == "" ) then return ""; end
 --	local trace = { }
---	
+--
 --	trace.start = ply:EyePos();
 --	trace.endpos = trace.start + ply:GetAimVector() * 85;
 --	trace.filter = ply;
---	
+--
 --	local tr = util.TraceLine( trace );
---		
+--
 --		if( not ply:CanAfford( 50000 )) then
 --			Notify( ply, 4, 3, "Cannot afford this" );
 --			return "";
@@ -1939,7 +1940,7 @@ function BuyWashingMachinePrinter( ply )
 --		ply:AddMoney( -50000 );
 --		Notify( ply, 0, 3, "You bought a Washing Machine Printer!" );
 --		local druglab = ents.Create( "money_printer_washingmachine" );
--- 
+--
 --		druglab:SetPos( tr.HitPos + tr.HitNormal*200);
 --		druglab:Spawn();
 --
@@ -1952,13 +1953,13 @@ function BuyPrinter( ply )
 --	args = Purify(args)
 --	if( args == "" ) then return ""; end
 --	local trace = { }
---	
+--
 --	trace.start = ply:EyePos();
 --	trace.filter = ply;
 --	trace.endpos = trace.start + ply:GetAimVector() * 85;
---	
+--
 --	local tr = util.TraceLine( trace );
---		
+--
 --		if( not ply:CanAfford( 50000 )) then
 --			Notify( ply, 4, 3, "Cannot afford this" );
 --			return "";
@@ -1970,7 +1971,7 @@ function BuyPrinter( ply )
 --		ply:AddMoney( -50000 );
 --		Notify( ply, 0, 3, "You bought a Washing Machine Printer" );
 --		local druglab = ents.Create( "money_printer_washingmachine" );
--- 
+--
 --		druglab:SetColor(140, 120, 83, 254)
 --		druglab:SetPos( tr.HitPos + tr.HitNormal*148);
 --		druglab:Spawn();
@@ -1986,11 +1987,11 @@ function BuyStill( ply,args )
 	if count==nil then count = 1 end
 	if count>CfgVars["maxstills"] || count<1 then count = 1 end
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 	for i=1,count do
 		if( not ply:CanAfford( CfgVars["stillcost"] ) ) then
@@ -2004,7 +2005,7 @@ function BuyStill( ply,args )
 		ply:AddMoney( CfgVars["stillcost"] * -1 );
 		Notify( ply, 0, 3, "You bought a Moonshine Still" );
 		local druglab = ents.Create( "still_average" );
- 
+
 		druglab.Owner = ply
 		druglab:SetPos( tr.HitPos + tr.HitNormal*40);
 		druglab:Spawn();
@@ -2016,13 +2017,13 @@ AddChatCommand( "/buystill", BuyStill );
 
 --function ccSetTeam( ply, cmd, args )
 --
---	if( ply:EntIndex() ~= 0 and not Admins[ply:SteamID()] ) then 
+--	if( ply:EntIndex() ~= 0 and not Admins[ply:SteamID()] ) then
 --		ply:PrintMessage( 2, "You're not an admin" );
 --		return;
 --	end
 --
 --	local target = FindPlayer( args[1] );
---	
+--
 --	if( target ) then
 --		local num = tonumber(args[2])
 --		if (num>0 && num<13) then
@@ -2042,27 +2043,27 @@ AddChatCommand( "/buystill", BuyStill );
 --			end
 --			target:ExitVehicle()
 --			target:KillSilent();
---			
+--
 --			local nick = "";
---			
+--
 --			if( ply:EntIndex() ~= 0 ) then
 --				nick = ply:Nick();
 --			else
 --				nick = "Console";
 --			end
---		
+--
 --			target:PrintMessage( 2, nick .. " changed your team to " .. args[2] );
 --		end
 --	else
---	
+--
 --		if( ply:EntIndex() == 0 ) then
 --			Msg( "Did not find player: " .. args[1] );
 --		else
 --			ply:PrintMessage( 2, "Did not find player: " .. args[1] );
 --		end
---		
+--
 --		return;
---	
+--
 --	end
 --
 --end
@@ -2080,11 +2081,11 @@ function BuyNPC(ply,args)
 	args = Purify(args)
 	args = string.Explode(" ", args)
 	local trace = { }
-	
+
 	trace.start = ply:EyePos();
 	trace.endpos = trace.start + ply:GetAimVector() * 85;
 	trace.filter = ply;
-	
+
 	local tr = util.TraceLine( trace );
 
 	local npctype = "npc_manhack"
@@ -2092,7 +2093,7 @@ function BuyNPC(ply,args)
 	npctype = "npc_metropolice"
 	// lol wut
 	if( true ) then
-		
+
 		/*if( not ply:CanAfford( CfgVars["deaglecost"] ) ) then
 			Notify( ply, 4, 3, "Cannot afford this" );
 			return "";
@@ -2109,17 +2110,17 @@ function BuyNPC(ply,args)
 		end
 		npc:Spawn()
 		npc:Give("weapon_mac102") // args[2]
-		
+
 		npc:AddRelationship("player D_FR 3")
 		npc:AddRelationship("player D_HT 9")
 		npc:AddRelationship("player D_LI 8")
 		npc:AddRelationship("player D_NU 10")
-		
+
 		npc:AddEntityRelationship(ply,D_LI,99)
 		npc:AddEntityRelationship(ply,D_HT,0)
 		npc:AddEntityRelationship(ply,D_FR,5)
 		npc:AddEntityRelationship(ply,D_NU,4)
-		
+
 		npc:SetNPCState(1)
 		npc:SetLastPosition(ply:GetPos())
 		npc:SetSchedule(71)
@@ -2132,7 +2133,7 @@ end
 
 function BuyAmmo( ply )
 		local plyweapon = ply:GetActiveWeapon()
-		
+
 		if ply:GetActiveWeapon():GetClass() == "weapon_mad_c4" then
 			ply:GiveAmmo(1, plyweapon:GetPrimaryAmmoType())
 			ply:AddMoney( -10000 );
@@ -2156,7 +2157,7 @@ function BuyAmmo( ply )
 			return ""
 		end
 			ply:GiveAmmo(25, plyweapon:GetPrimaryAmmoType())
-			ply:AddMoney( -250 )		
+			ply:AddMoney( -250 )
 			Notify( ply, 0, 3, "25 Ammo Purchased for 250 dollars." );
 			return ""
 end
@@ -2166,25 +2167,25 @@ concommand.Add("buyammo", BuyAmmo)
 function SuperSecretCommandOfTheAges( ply )
 	if ply:IsSuperAdmin() then
 		ply:SetNWBool("superdrug", true)
-		
+
 		Regenup(ply, CfgVars["uberduration"])
 		Roidup(ply, CfgVars["uberduration"])
 		Ampup(ply, CfgVars["uberduration"])
 		PainKillerup(ply, CfgVars["uberduration"])
 		Mirrorup(ply, CfgVars["uberduration"])
-		
+
 		Focusup(ply, CfgVars["uberduration"])
 		MagicBulletup(ply, CfgVars["uberduration"])
 		Adrenalineup(ply, CfgVars["uberduration"])
 		DoubleJumpup(ply, CfgVars["uberduration"])
 		Leechup(ply, CfgVars["uberduration"])
-		
+
 		ShockWaveup(ply, CfgVars["uberduration"])
 		DoubleTapup(ply, CfgVars["uberduration"])
 		Knockbackup(ply, CfgVars["uberduration"])
 		ArmorPiercerup(ply, CfgVars["uberduration"])
 		Antidoteup(ply, CfgVars["uberduration"])
-		
+
 		Notify( ply, 0, 3, "You are now Uber." );
 		ply:SetNWBool("superdrug", false)
 		return ""
