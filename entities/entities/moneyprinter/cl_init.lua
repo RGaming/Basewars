@@ -31,9 +31,9 @@ local function OpenMenu( )
 	DLabel2:SetPos( 58, 14 );
 	DLabel2:SetText( LocalPlayer( ):GetNWInt( "vaultamount", 0 ) );
 	DLabel2:SizeToContents( );
-	DLabel1:SetTextColor( Color( 10, 135, 10, 255 ) );
 
 	DLabel1 = vgui.Create( "DLabel", DPanel1 );
+	DLabel1:SetTextColor( Color( 10, 135, 10, 255 ) );
 	DLabel1:SetPos( 8, 14 );
 	DLabel1:SetText( "Contents: " );
 	DLabel1:SizeToContents( );
@@ -62,5 +62,4 @@ end );
 
 usermessage.Hook( "MoneyVaultMenu", function( )
   OpenMenu( )
-  //ENT:OpenMenu( )
 end );
