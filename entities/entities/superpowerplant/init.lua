@@ -10,7 +10,7 @@ include('shared.lua')
 
 function ENT:Initialize()
 
-	self.Entity:SetModel("models/props_mining/diesel_generator.mdl")
+	self.Entity:SetModel("models/props_wasteland/laundry_washer003.mdl")
 	self.Entity:PhysicsInit(SOLID_VPHYSICS)
 	self.Entity:SetMoveType(MOVETYPE_VPHYSICS)
 	self.Entity:SetSolid(SOLID_VPHYSICS)
@@ -41,9 +41,9 @@ end
 function ENT:giveMoney()
 	local ply = self.Owner
 	if(ValidEntity(ply) && !self.Inactive) then
-		if ply:CanAfford(5) then
-			ply:AddMoney( -5 );
-			Notify( ply, 2, 3, "$5 spent to keep Generator running." );
+		if ply:CanAfford(10) then
+			ply:AddMoney( -10 );
+			Notify( ply, 2, 3, "$10 spent to keep Generator running." );
 		else
 			Notify( ply, 4, 3, "Generator has shut off from lack of money" )
 			self.Entity:shutOff()
@@ -87,7 +87,7 @@ function ENT:createDrug()
 	drug:Spawn()
 	self.Entity:SetNWBool("sparking",false)
 end
- 
+
 function ENT:Think()
 	if (ValidEntity(self.Owner)==false) then
 		self.Entity:Remove()
@@ -99,7 +99,7 @@ end
 
 function ENT:OnRemove( )
 	self.Entity:UnSocket()
-	timer.Destroy(tostring(self.Entity)) 
+	timer.Destroy(tostring(self.Entity))
 	timer.Destroy(tostring(self.Entity) .. "fuckafkfags")
 	timer.Destroy(tostring(self.Entity) .. "notifyoff")
 	local ply = self.Owner
@@ -145,28 +145,6 @@ end
 
 
 function ENT:MakeScraps()
---	if !self.scrap then
---		self.scrap = false
---		local value = CfgVars["generatorcost"]/8
---		if value<5 then value = 5 end
---		for i=0, 5, 1 do
---			local scrapm = ents.Create("scrapmetal")
---			scrapm:SetModel( "models/gibs/metal_gib" .. math.random(1,5) .. ".mdl" );
---			local randpos = Vector(math.random(-5,5), math.random(-5,5), math.random(0,5))
---			scrapm:SetPos(self.Entity:GetPos()+randpos)
---			scrapm:Spawn()
---			scrapm:GetTable().ScrapMetal = true
---			scrapm:GetTable().Amount = math.random(3,value)
---			scrapm:Activate()
---			scrapm:GetPhysicsObject():SetVelocity(randpos*35)
---			
---			timer.Create( "scraptimer" ..i, 10, 1, function(removeme)
---				removeme:Remove()
---			end, scrapm )
---
---			
---		end 
---	end
 end
 
 function ENT:UnSocket()

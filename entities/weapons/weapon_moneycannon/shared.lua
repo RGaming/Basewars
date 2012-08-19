@@ -1,14 +1,14 @@
 if ( SERVER ) then
 
 	AddCSLuaFile( "shared.lua" )
-	
+
 	SWEP.HoldType			= "Pistol"
-	
+
 end
 
 if ( CLIENT ) then
 
-	SWEP.PrintName			= "Money Cannon"			
+	SWEP.PrintName			= "Money Cannon"
 	SWEP.Author				= "Fijet"
 
 	SWEP.Slot				= 5
@@ -43,7 +43,7 @@ SWEP.Primary.DefaultClip	= -1	--Number of shots in next clip
 SWEP.Primary.Automatic   	= false	--Pistol fire (false) or SMG fire (true)
 SWEP.Primary.Ammo         	= "none"	--Ammo Type
 -------------End Primary Fire Attributes------------------------------------
- 
+
 -------------Secondary Fire Attributes-------------------------------------
 SWEP.Secondary.Delay		= 0.9
 SWEP.Secondary.Recoil		= 0
@@ -55,10 +55,10 @@ SWEP.Secondary.DefaultClip	= -1
 SWEP.Secondary.Automatic   	= true
 SWEP.Secondary.Ammo         = "none"
 -------------End Secondary Fire Attributes--------------------------------
- 
+
 -- function SWEP:Reload() --To do when reloading
--- end 
- 
+-- end
+
 function SWEP:Think() -- Called every frame
 end
 
@@ -75,7 +75,7 @@ self.Weapon:SetNextPrimaryFire(CurTime() + 0.01)
 self.Weapon:SendWeaponAnim(ACT_VM_MISSCENTER)
 if SERVER then
 local moneybag = ents.Create("prop_moneybag")
-moneybag:SetModel( "models/notes.mdl" );
+moneybag:SetModel( "models/props/cs_assault/Money.mdl" );
 moneybag:SetAngles(self.Owner:EyeAngles())-- Angle(0,90,0))
 moneybag:SetPos(self.Owner:GetShootPos())
 moneybag:SetOwner(self.Owner)
@@ -101,7 +101,7 @@ self.Weapon:SetNextSecondaryFire(CurTime() + 0.01)
 self.Weapon:SendWeaponAnim(ACT_VM_MISSCENTER)
 if SERVER then
 local moneybag = ents.Create("prop_moneybag")
-moneybag:SetModel( "models/notes.mdl" );
+moneybag:SetModel( "models/props/cs_assault/Money.mdl" );
 moneybag:SetAngles(self.Owner:EyeAngles())-- Angle(0,90,0))
 moneybag:SetPos(self.Owner:GetShootPos())
 moneybag:SetOwner(self.Owner)

@@ -240,7 +240,7 @@ buytable["Structures - Base"].Names = {"Sentry Gun", "Spawn Point","Dispenser","
 buytable["Structures - Base"].Cost = {CfgVars["turretcost"],150,400,500,500,1000,400,2500,500,1000}
 buytable["Structures - Base"].Data = {"sentry","spawn","dispenser","radar","refinery","factory","generator","supergenerator","moneyvault","supplycabinet"}
 buytable["Structures - Base"].Cmd = "buystruct"
-buytable["Structures - Base"].Model = {"models/props_c17/TrapPropeller_Engine.mdl", "models/props_trainstation/trainstation_clock001.mdl", "models/props_lab/reciever_cart.mdl" , "models/props_rooftop/roof_dish001.mdl", "models/props_c17/furniturestove001a.mdl", "models/props/de_prodigy/transformer.mdl", "models/props_vehicles/generatortrailer01.mdl","models/props_mining/diesel_generator.mdl","models/props_lab/powerbox01a.mdl","models/props/CS_militia/table_shed.mdl"}
+buytable["Structures - Base"].Model = {"models/props_c17/TrapPropeller_Engine.mdl", "models/props_trainstation/trainstation_clock001.mdl", "models/props_lab/reciever_cart.mdl" , "models/props_rooftop/roof_dish001.mdl", "models/props_c17/furniturestove001a.mdl", "models/props/de_prodigy/transformer.mdl", "models/props_vehicles/generatortrailer01.mdl","models/props_wasteland/laundry_washer003.mdl","models/props_lab/powerbox01a.mdl","models/props/CS_militia/table_shed.mdl"}
 
 buytable["Structures - Profitable"] = {}
 buytable["Structures - Profitable"].Names = {"Still","Drug Lab","Meth Lab","Stable Meth Lab","Bronze Money Printer","Silver Money Printer","Gold Money Printer","Platinum Money Printer","Diamond Money Printer","Nuclear Money Printer"}
@@ -267,7 +267,7 @@ local PANEL = {}
 /*---------------------------------------------------------
    Name: init
 ---------------------------------------------------------*/
-function PANEL:Init()	
+function PANEL:Init()
 	self:SetSize( 83, 83 )
 	self.Label = vgui.Create ( "DLabel", self )
 	self:SetKeepAspect( true )
@@ -281,10 +281,10 @@ local PANEL = {}
    Name: Init
 ---------------------------------------------------------*/
 function PANEL:Init()
-	self.PanelList = vgui.Create( "DPanelList", self )	
+	self.PanelList = vgui.Create( "DPanelList", self )
 		self.PanelList:SetPadding( 4 )
 		self.PanelList:SetSpacing( 2 )
-		self.PanelList:EnableVerticalScrollbar( true )	
+		self.PanelList:EnableVerticalScrollbar( true )
 	self:BuildList()
 end
 
@@ -295,41 +295,41 @@ end
 	local function AddComma(n)
 		local sn = tostring(n)
 		sn = string.ToTable(sn)
-		
+
 		local tab = {}
 		for i=0,#sn-1 do
-			
+
 			if i%3 == #sn%3 and !(i==0) then
 				table.insert(tab, ",")
 			end
 			table.insert(tab, sn[i+1])
-		
+
 		end
-		
+
 		return string.Implode("",tab)
 	end
-	
+
 function PANEL:BuildList()
 	self.PanelList:Clear()
-	
+
 	local Categorised = {}
 	// Build into categories
 	for k, v in pairs( buytable ) do
 		v.Category = k
 		Categorised[ v.Category ] = Categorised[ v.Category ] or {}
 		table.insert( Categorised[ v.Category ], v )
-	
+
 	end
-	
+
 	// Loop through each category
 	for CategoryName, v in SortedPairs( Categorised ) do
-	
+
 		local Category = vgui.Create( "DCollapsibleCategory", self )
 		self.PanelList:AddItem( Category )
 		Category:SetExpanded(false)
 		Category:SetLabel( CategoryName )
 		Category:SetCookieName( "EntitySpawn."..CategoryName )
-		
+
 		local Content = vgui.Create( "DPanelList" )
 		Category:SetContents( Content )
 		Content:EnableHorizontal( true )
@@ -337,7 +337,7 @@ function PANEL:BuildList()
 		Content:SetSpacing( 2 )
 		Content:SetPadding( 2 )
 		Content:SetAutoSize( true )
-		
+
 		number=1
 		//this is annoying code, i only wrote it to expriment with and then decided to use it and didnt feel like making it pretty.
 		for k,v in pairs( buytable[ CategoryName ].Data ) do
@@ -347,20 +347,20 @@ function PANEL:BuildList()
 					local data = buytable[ CategoryName ].Data[ number ]
 					local name = buytable[ CategoryName ].Names[ number ]
 					local Icon = vgui.Create( "SpawnIcon", self)
-					
+
 					if(buytable[ CategoryName ].Model[ number ] !=nil) then
 						Icon:SetModel( buytable[ CategoryName ].Model[ number ] )
 					else
 						Icon:SetModel( "models/error.mdl" )
 					end
-					
+
 						if(CategoryName == "Weapons - General") then-- or (CategoryName == "Weapons - HandGuns") then
 					Icon:SetToolTip( " Item: " .. buytable[ CategoryName ].Names[ number ] .. "\n  Single Weapon Cost: $" .. AddComma(buytable[ CategoryName ].Cost[ number ]*.5) .. "\n Weapon Shipment Cost: $" .. AddComma(buytable[ CategoryName ].Cost[ number ]*1.5) )
 						else
 					Icon:SetToolTip( " Item: " .. buytable[ CategoryName ].Names[ number ] .. "\n Cost: $" .. AddComma(buytable[ CategoryName ].Cost[ number ] ))
 						end
-						
-					Icon.DoClick = function() 
+
+					Icon.DoClick = function()
 						if(CategoryName == "Weapons - General") then-- or (CategoryName == "Weapons - HandGuns") then
 								local menu1 = DermaMenu()
 								menu1:AddOption("Buy Single Weapon", function() RunConsoleCommand( cmdtwo, data ) surface.PlaySound( "chaching.mp3" ) end)
@@ -372,7 +372,7 @@ function PANEL:BuildList()
 							RunConsoleCommand( cmd, data )
 						end
 					end
-					
+
 					local lable  = vgui.Create("DLabel", Icon)
 					lable:SetFont( "DefaultSmallDropShadow" )
 					lable:SetTextColor( color_white )
@@ -380,11 +380,11 @@ function PANEL:BuildList()
 					lable:SetContentAlignment( 5 )
 					lable:SetWide( self:GetWide() )
 					lable:AlignBottom( -42 )
-			
+
 					Content:AddItem( Icon )
-					
+
 				else
-				
+
 					local cmd = buytable[ CategoryName ].Cmd
 					local cmdtwo = buytable[ CategoryName ].CmdTwo
 					local data = buytable[ CategoryName ].Data[ number ]
@@ -392,28 +392,28 @@ function PANEL:BuildList()
 					local Icon = vgui.Create( "SpawnIcon", self)
 					Icon:SetModel( "models/combine_apc_destroyed_gib06.mdl" )
 					Icon:SetToolTip( " Item: " .. buytable[ CategoryName ].Names[ number ] .. "\n Normal Cost: $" .. AddComma(buytable[ CategoryName ].Cost[ number ]) .. "\n Batch Cost: $" .. AddComma(buytable[ CategoryName ].Cost[ number ]*4) )
-					
 
-					
-					Icon.DoClick = function() 
+
+
+					Icon.DoClick = function()
 								local menu1 = DermaMenu()
 								menu1:AddOption("Buy Single Drug", function() RunConsoleCommand( cmd, data ) surface.PlaySound( "chaching.mp3" ) end)
 								menu1:AddOption("Buy Batch of Drugs", function() RunConsoleCommand( cmdtwo, data ) surface.PlaySound( "chaching.mp3" ) end)
 								menu1:Open()
 					end
-					
+
 					local drugs = vgui.Create("DLabel", Icon)
 					drugs:SetText(drugtable[ data ].symbol)
 					drugs:SetFont(drugtable[ data ].font)
 					drugs:SetColor(drugtable[ data ].color)
-					
-					if(drugtable[ data ].font == "DrugFont2") then 
+
+					if(drugtable[ data ].font == "DrugFont2") then
 						drugs:SetPos(23, 3)
 					else
 						drugs:SetPos(23, 25)
 					end
 					drugs:SizeToContents()
-					
+
 					local lable  = vgui.Create("DLabel", Icon)
 					lable:SetFont( "DefaultSmall" )
 					lable:SetTextColor( drugtable[ data ].color )
@@ -421,7 +421,7 @@ function PANEL:BuildList()
 					lable:SetContentAlignment( 5 )
 					lable:SetWide( self:GetWide() )
 					lable:AlignBottom( -42 )
-	
+
 					Content:AddItem( Icon )
 				end
 				number = number+1

@@ -16,7 +16,7 @@ function ENT:Initialize()
 	self.Entity:SetMoveType(MOVETYPE_VPHYSICS)
 	self.Entity:SetSolid(SOLID_VPHYSICS)
 	local phys = self.Entity:GetPhysicsObject()
-	
+
 	if(phys:IsValid()) then phys:Wake() end
 	timer.Create( tostring(self.Entity), 125, 0, self.giveMoney, self)
 	timer.Create( tostring(self.Entity) .. "fuckafkfags", 1500, 1, self.shutOff, self)
@@ -36,13 +36,13 @@ function ENT:giveMoney()
 	local ply = self.Owner
 	if(ValidEntity(ply) && !self.Inactive && self.Entity:IsPowered()) then
 		// ply:AddMoney( 25 );
-		
+
 		local trace = { }
-		
+
 		trace.start = self.Entity:GetPos()+self.Entity:GetAngles():Up()*15;
 		trace.endpos = trace.start + self.Entity:GetAngles():Forward() + self.Entity:GetAngles():Right()
 		trace.filter = self.Entity
-		
+
 		local tr = util.TraceLine( trace );
 		local amount = math.random( 75000, 75100 )
 		if (self.Entity:GetNWInt("upgrade")==2) then
@@ -51,16 +51,16 @@ function ENT:giveMoney()
 			amount = math.random( 100000, 100100 )
 		end
 		local moneybag = ents.Create( "prop_moneybag" );
-		moneybag:SetModel( "models/notes.mdl" );
+		moneybag:SetModel( "models/props/cs_assault/Money.mdl" );
 		moneybag:SetPos( tr.HitPos );
 		moneybag:SetAngles(self.Entity:GetAngles())
 		moneybag:Spawn();
 		moneybag:SetColor(200,255,200,255)
-		
+
 		moneybag:SetMoveType( MOVETYPE_VPHYSICS )
 		moneybag:GetTable().MoneyBag = true;
 		moneybag:GetTable().Amount = amount
-		
+
 		Notify( ply, 0, 3, "Counterfeit money printer created $" .. amount );
 	elseif (self.Inactive) then
 		Notify( ply, 4, 3, "A money printer is inactive, press use on it to make it active again." );
@@ -91,7 +91,7 @@ function ENT:Use(activator,caller)
 		self.NearInact = false
 		self.Entity:SetNWBool("sparking",true)
 		timer.Create( tostring(self.Entity) .. "resupply", 1, 1, self.Reload, self)
-		
+
 	end
 end
 
@@ -107,7 +107,7 @@ function ENT:Reload()
 	local drugPos = self.Entity:GetPos()
 	self.Entity:SetNWBool("sparking",false)
 end
- 
+
 function ENT:Think()
 	if (ValidEntity(self.Owner)==false) then
 		self.Entity:Remove()
@@ -115,7 +115,7 @@ function ENT:Think()
 end
 
 function ENT:OnRemove( )
-	timer.Destroy(tostring(self.Entity)) 
+	timer.Destroy(tostring(self.Entity))
 	timer.Destroy(tostring(self.Entity) .. "fuckafkfags")
 	timer.Destroy(tostring(self.Entity) .. "notifyoff")
 	local ply = self.Owner
