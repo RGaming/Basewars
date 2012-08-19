@@ -1,8 +1,8 @@
 include('shared.lua')
 
-SWEP.PrintName			= "Mad Cows Weapon Sniper Base"		// 'Nice' Weapon name (Shown on HUD)	
-SWEP.Slot				= 3							// Slot in the weapon selection menu
-SWEP.SlotPos			= 1							// Position in the slot
+SWEP.PrintName			= "Mad Cows Weapon Sniper Base"		-- 'Nice' Weapon name (Shown on HUD)
+SWEP.Slot				= 3							-- Slot in the weapon selection menu
+SWEP.SlotPos			= 1							-- Position in the slot
 
 /*---------------------------------------------------------
    Name: SWEP:DrawHUD()
@@ -21,51 +21,52 @@ function SWEP:DrawHUD()
 
 		local bScope = self.Weapon:GetDTBool(2)
 
-		if bScope ~= self.bLastScope then // Are we turning the scope off/on?
+		if bScope ~= self.bLastScope then -- Are we turning the scope off/on?
 			self.bLastScope = bScope
 			self.fScopeTime = CurTime()
 		elseif bScope then
 			local fScopeZoom = self.Weapon:GetNetworkedFloat("ScopeZoom")
 
-			if fScopeZoom ~= self.fLastScopeZoom then // Are we changing the scope zoom level?
-		
+			if fScopeZoom ~= self.fLastScopeZoom then -- Are we changing the scope zoom level?
+
 				self.fLastScopeZoom = fScopeZoom
 				self.fScopeTime = CurTime()
 			end
 		end
-			
+
 		local fScopeTime = self.fScopeTime or 0
 
 		if fScopeTime > CurTime() - SCOPEFADE_TIME then
-		
+
 			local Mul = 1.0 -- This scales the alpha
 			Mul = 1 - math.Clamp((CurTime() - fScopeTime) / SCOPEFADE_TIME, 0, 1)
-		
-			surface.SetDrawColor(0, 0, 0, 255 * Mul) // Draw a black rect over everything and scale the alpha for a neat fadein effect
+
+			surface.SetDrawColor(0, 0, 0, 255 * Mul) -- Draw a black rect over everything and scale the alpha for a neat fadein effect
 			surface.DrawRect(0, 0, iScreenWidth,iScreenHeight)
 		end
 
-		if (bScope) then 
-	
-			// Draw the crosshair
+		if (bScope) then
+
+			-- Draw the crosshair
 			if not (self.RedDot) then
 				surface.SetDrawColor(0, 0, 0, 255)
 				surface.DrawLine(self.CrossHairTable.x11, self.CrossHairTable.y11, self.CrossHairTable.x12, self.CrossHairTable.y12)
 				surface.DrawLine(self.CrossHairTable.x21, self.CrossHairTable.y21, self.CrossHairTable.x22, self.CrossHairTable.y22)
 			end
 
-			// Put the texture
+			-- Put the texture
 			surface.SetDrawColor(0, 0, 0, 255)
 
-			if (self.RedDot) then
-				surface.SetTexture(surface.GetTextureID("scope/scope_reddot"))
-			else
-				surface.SetTexture(surface.GetTextureID("scope/scope_normal"))
-			end
+			surface.SetTexture(surface.GetTextureID("scope/scope"))
+			--if (self.RedDot) then
+			--	surface.SetTexture(surface.GetTextureID("scope/scope_reddot"))
+			--else
+			--	surface.SetTexture(surface.GetTextureID("scope/scope_normal"))
+			--end
 
 			surface.DrawTexturedRect(self.LensTable.x, self.LensTable.y, self.LensTable.w, self.LensTable.h)
 
-			// Fill in everything else
+			-- Fill in everything else
 			surface.SetDrawColor(0, 0, 0, 255)
 			surface.DrawRect(self.QuadTable.x1 - 2.5, self.QuadTable.y1 - 2.5, self.QuadTable.w1 + 5, self.QuadTable.h1 + 5)
 			surface.DrawRect(self.QuadTable.x2 - 2.5, self.QuadTable.y2 - 2.5, self.QuadTable.w2 + 5, self.QuadTable.h2 + 5)
@@ -75,7 +76,7 @@ function SWEP:DrawHUD()
 	end
 
 	if (self.Weapon:GetDTBool(1) and not self.Weapon:GetNetworkedBool("Suppressor")) or (cl_crosshair_t:GetBool() == false) or (LocalPlayer():InVehicle()) then return end
-	
+
 	local hitpos = util.TraceLine ({
 		start = LocalPlayer():GetShootPos(),
 		endpos = LocalPlayer():GetShootPos() + LocalPlayer():GetAimVector() * 4096,
@@ -84,23 +85,23 @@ function SWEP:DrawHUD()
 	}).HitPos
 
 	local screenpos = hitpos:ToScreen()
-	
+
 	local x = screenpos.x
 	local y = screenpos.y
 
 	if self.Primary.Cone < 0.005 then
 		self.Primary.Cone = 0.005
 	end
-	
+
 	local gap = ((self.Primary.Cone * 275) + (((self.Primary.Cone * 275) * (ScrH() / 720))) * (1 / self:CrosshairAccuracy())) * 0.75
-	
+
 	gap = math.Clamp(gap, 0, (ScrH() / 2) - 100)
 	local length = cl_crosshair_l:GetInt()
 
-	self:DrawCrosshairHUD(x - gap - length, y - 1, length, 3) 	// Left
-	self:DrawCrosshairHUD(x + gap + 1, y - 1, length, 3) 		// Right
- 	self:DrawCrosshairHUD(x - 1, y - gap - length, 3, length) 	// Top 
- 	self:DrawCrosshairHUD(x - 1, y + gap + 1, 3, length) 		// Bottom
+	self:DrawCrosshairHUD(x - gap - length, y - 1, length, 3) 	-- Left
+	self:DrawCrosshairHUD(x + gap + 1, y - 1, length, 3) 		-- Right
+ 	self:DrawCrosshairHUD(x - 1, y - gap - length, 3, length) 	-- Top
+ 	self:DrawCrosshairHUD(x - 1, y + gap + 1, 3, length) 		-- Bottom
 end
 
 /*---------------------------------------------------------
@@ -113,22 +114,22 @@ function SWEP:TranslateFOV(current_fov)
 	local fScopeZoom = self.Weapon:GetNetworkedFloat("ScopeZoom")
 
 	if self.Weapon:GetDTBool(2) then return current_fov / fScopeZoom end
-	
+
 	local bIron = self.Weapon:GetDTBool(1)
 
-	if bIron ~= self.bLastIron then // Do the same thing as in CalcViewModel. I don't know why this works, but it does.
-		self.bLastIron = bIron 
+	if bIron ~= self.bLastIron then -- Do the same thing as in CalcViewModel. I don't know why this works, but it does.
+		self.bLastIron = bIron
 		self.fIronTime = CurTime()
 	end
-	
+
 	local fIronTime = self.fIronTime or 0
 
-	if not bIron and (fIronTime < CurTime() - IRONSIGHT_TIME) then 
+	if not bIron and (fIronTime < CurTime() - IRONSIGHT_TIME) then
 		return current_fov
 	end
-	
-	local Mul = 1.0 // More interpolating shit
-	
+
+	local Mul = 1.0 -- More interpolating shit
+
 	if fIronTime > CurTime() - IRONSIGHT_TIME then
 		Mul = math.Clamp((CurTime() - fIronTime) / IRONSIGHT_TIME, 0, 1)
 		if not bIron then Mul = 1 - Mul end
@@ -169,7 +170,7 @@ local function SniperCreateMove(cmd)
 
 		staggerdir = (staggerdir + ft * 10 * VectorRand()):Normalize()
 
-		cmd:SetViewAngles(ang)	
+		cmd:SetViewAngles(ang)
 	end
 end
 hook.Add ("CreateMove", "SniperCreateMove", SniperCreateMove)
