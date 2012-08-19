@@ -7,9 +7,9 @@ bug fixes and features incoming. The plan is to get this game mode
 up to production quality
 
 
-##requirement
+##Requirement
 your server will need models from: (tf, "Counter-Strike Source")
 
-##install
+##Install
 1) copy Basewars into your gamemode folder
 
