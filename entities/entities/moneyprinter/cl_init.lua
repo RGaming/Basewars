@@ -7,7 +7,8 @@ local DLabel2;
 local DButton1;
 local DTextEntry1;
 local DButton2;
-function ENT:OpenMenu( )
+
+local function OpenMenu( )
 	DFrame1 = vgui.Create( "DFrame" );
 	DFrame1:SetSize( 402, 126 );
 	DFrame1:SetPos( 166, 104 );
@@ -60,5 +61,6 @@ hook.Add( "Think", "MoneyVaultUpdate", function( )
 end );
 
 usermessage.Hook( "MoneyVaultMenu", function( )
-  ENT:OpenMenu( )
+  OpenMenu( )
+  //ENT:OpenMenu( )
 end );

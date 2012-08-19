@@ -8,7 +8,7 @@ local DButton1;
 local DButton2;
 
 canopenmenu = true;
-local function OpenVaultMenu( )
+function OpenVaultMenu( )
 	if canopenmenu then
 		DFrame1 = vgui.Create( "DFrame" );
 		DFrame1:SetSize( 402, 126 );
@@ -17,11 +17,11 @@ local function OpenVaultMenu( )
 		DFrame1:SetSizable( true );
 		DFrame1:SetDeleteOnClose( false );
 		DFrame1:MakePopup( );
-		
+
 		DPanel1 = vgui.Create( "DPanel", DFrame1 );
 		DPanel1:SetSize( 394, 95 );
 		DPanel1:SetPos( 4, 27 );
-		
+
 		DButton1 = vgui.Create( "DButton", DPanel1 );
 		DButton1:SetSize( 188, 51 );
 		DButton1:SetPos( 4, 40 );
@@ -29,18 +29,18 @@ local function OpenVaultMenu( )
 		DButton1.DoClick = function( )
 			RunConsoleCommand( "ll_vault_eject" );
 		end;
-		
+
 		DLabel2 = vgui.Create( "DLabel", DPanel1 );
 		DLabel2:SetPos( 58, 14 );
 		DLabel2:SetText( LocalPlayer( ):GetNWInt( "vaultamount", 0 ) );
 		DLabel2:SizeToContents( );
 		DLabel2:SetTextColor( Color( 10, 135, 10, 255 ) );
-		
+
 		DLabel1 = vgui.Create( "DLabel", DPanel1 );
 		DLabel1:SetPos( 8, 14 );
 		DLabel1:SetText( "Total: " );
 		DLabel1:SizeToContents( );
-		
+
 		DButton2 = vgui.Create( "DButton", DPanel1 );
 		DButton2:SetSize( 193, 51 );
 		DButton2:SetPos( 195, 40 );
