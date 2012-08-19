@@ -8,7 +8,7 @@ up to production quality
 
 
 ##requirement
-your server will need models from: (tf, "Counter-Strike Source", )
+your server will need models from: (tf, "Counter-Strike Source")
 
 ##install
 1) copy Basewars into your gamemode folder
