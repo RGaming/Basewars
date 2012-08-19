@@ -25,7 +25,9 @@ local function OpenMenu( )
 	DButton1:SetSize( 188, 51 );
 	DButton1:SetPos( 4, 40 );
 	DButton1:SetText( "Eject" );
-	DButton1.DoClick = function( ) end;
+	DButton1.DoClick = function( )
+    RunConsoleCommand( "ll_vault_eject" );
+  end;
 
 	DLabel2 = vgui.Create( "DLabel", DPanel1 );
 	DLabel2:SetPos( 58, 14 );

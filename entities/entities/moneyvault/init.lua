@@ -130,7 +130,7 @@ concommand.Add( "ll_vault_deposit", function( ply, cmd, argv )
 		end;
 end );
 
-concommand.Add( "ll_vault_eject", function( ply, cmd, argv )
+function ll_vault_eject( ply, cmd, argv )
 	local trace = { };
 		trace.start = ply:GetShootPos( );
 		trace.endpos = ply:GetShootPos( ) + ( ply:GetAimVector( ) * 200 );
@@ -140,4 +140,7 @@ concommand.Add( "ll_vault_eject", function( ply, cmd, argv )
 			traceline.Entity:EjectMoney( );
 			traceline.Entity:EmitSound( "ambient/alarms/klaxon1.wav" );
 		end;
-end );
+end
+
+concommand.Add( "ll_vault_eject", ll_vault_eject );
+
