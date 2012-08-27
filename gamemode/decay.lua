@@ -8,7 +8,7 @@ local function AddDecay( ent, decaytime )
 	timer.Simple( 1, function( )
 		if ent:IsValid( ) then
 			local _r, _g, _b = ent:GetColor( );
-			
+
 			_decays[ ent ] = {
 				Time = decaytime;
 				R = _r or 255;
@@ -31,7 +31,7 @@ hook.Add( "Think", "EntityDecay", function( )
 				v.R = v.R - 5;
 				v.G = v.G - 5;
 				v.B = v.B - 5;
-				
+
 				DecayRateCounter = CurTime( ) + DecayRate;
 			end;
 		end;
@@ -40,13 +40,5 @@ end );
 
 function ents.CreateEx( entity )
 	entity = ents.Create( entity );
-	
---	timer.Create( "decaytimer", 5, 1, function()
---		if entity:IsValid( ) then
---			entity:Remove()
---		end
---	end )
-
-	
 	return entity;
 end;

@@ -4,7 +4,6 @@ include "shared.lua";
 
 function ENT:UpdateMoney( )
 	if self:IsValid( ) then
-		-- self:SetNWInt( "vaultamount", self.Money );
 		self.Owner:SetNWInt( "vaultamount", self.Money );
 	end;
 end;
@@ -17,19 +16,17 @@ function ENT:Initialize( )
 	self:SetMoveType( MOVETYPE_VPHYSICS );
 	self:SetSolid( SOLID_VPHYSICS );
 	self:EmitSound( "ambient/machines/thumper_startup1.wav" );
-	
+
 	local phys = self:GetPhysicsObject( );
-	if( phys:IsValid( ) ) then 
+	if( phys:IsValid( ) ) then
 		phys:Wake( );
 	end;
-	
+
 	self.Entity:SetNWInt("damage",1000)
 	self.Entity:SetNWInt("upgrade", 0)
 	machineloop = CreateSound( self, Sound( "ambient/machines/wall_loop1.wav" ) );
 	machineloop:Play( );
-	
-			timer.Create("giveIntrest", 5, 0, self.giveInterest, self)
-	
+
 	self.Money = 0;
 	self.KeyPress = CurTime( );
 	local ply = self.Entity.Owner
@@ -48,25 +45,12 @@ function ENT:Use( activator, caller )
 end;
 
 function ENT:giveIntrest()
-		if (self.Entity:GetNWInt("upgrade")==0) then
-			self.Money = self.Money * 1.1
-			Notify( ply, 4, 3, "You have been given 10% Intrest in Your Money Bank." );
-		end
-		if (self.Entity:GetNWInt("upgrade")==1) then
-			Notify( ply, 4, 3, "You have been given 20% Intrest in Your Money Bank." );
-			self.Money = self.Money * 1.2
-		end
-		if (self.Entity:GetNWInt("upgrade")==2) then
-			self.Money = self.Money * 1.3
-		Notify( ply, 4, 3, "You have been given 30% Intrest in Your Money Bank." );
-		end
-	timer.Create("giveIntrest", 5, 0, self.giveInterest, self)
 end
 
 function ENT:EjectMoney( )
 	if self.Money > 0 then
 		local moneybag = ents.Create( "prop_moneybag" );
-			moneybag:SetModel( "models/notes.mdl" );
+      moneybag:SetModel( "models/props/cs_assault/Money.mdl" );
 			moneybag:SetPos( self:GetPos( ) + Vector( 0, 0, 20 ) );
 			moneybag:SetAngles( self:GetAngles( ) );
 			moneybag:SetColor( 200, 255, 200, 255 );
@@ -75,7 +59,7 @@ function ENT:EjectMoney( )
 			moneybag:GetTable( ).Amount = self.Money;
 			moneybag:SetVelocity( Vector( 0, 0, 10 ) * 10 );
 			moneybag.Ejected = true;
-			
+
 			self.Money = 0;
 			self:UpdateMoney( );
 	else
@@ -105,32 +89,8 @@ function ENT:Touch( ent )
 	end;
 end;
 
-concommand.Add( "ll_vault_deposit", function( ply, cmd, argv )
-	local amt = tonumber( argv[ 1 ] );
-	if not amt then
-		ply:ChatPrint "Invalid Money Vault deposit type!";
-		return;
-	end;
-	if not ply:CanAfford( amt ) then
-		ply:ChatPrint "You can't afford that!";
-		return;
-	end;
-	
-	ply:AddMoney( amt );
-	local trace = { };
-		trace.start = ply:GetShootPos( );
-		trace.endpos = ply:GetShootPos( ) + ( ply:GetAimVector( ) * 200 );
-		trace.filter = ply;
-		local traceline = util.TraceLine( trace );
-		if traceline.HitNonWorld and traceline.Entity:IsValid( ) then
-			local ent = traceline.Entity;
-			ent.Money = ent.Money + amt;
-			ent:EmitSound( "ambient/levels/labs/coinslot1.wav" );
-			ent:UpdateMoney( );
-		end;
-end );
 
-concommand.Add( "ll_vault_eject", function( ply, cmd, argv )
+function ll_vault_eject( ply, cmd, argv )
 	local trace = { };
 		trace.start = ply:GetShootPos( );
 		trace.endpos = ply:GetShootPos( ) + ( ply:GetAimVector( ) * 200 );
@@ -140,4 +100,7 @@ concommand.Add( "ll_vault_eject", function( ply, cmd, argv )
 			traceline.Entity:EjectMoney( );
 			traceline.Entity:EmitSound( "ambient/alarms/klaxon1.wav" );
 		end;
-end );
+end
+
+concommand.Add( "ll_vault_eject", ll_vault_eject );
+

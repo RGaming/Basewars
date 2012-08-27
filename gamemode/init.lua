@@ -38,7 +38,6 @@ AddCSLuaFile( "cl_init.lua" );
 AddCSLuaFile( "cl_msg.lua" )
 AddCSLuaFile( "shared.lua" );
 AddCSLuaFile( "cl_vgui.lua" );
-AddCSLuaFile( "entity.lua" );
 AddCSLuaFile( "cl_scoreboard.lua" );
 AddCSLuaFile( "scoreboard/admin_buttons.lua" );
 AddCSLuaFile( "scoreboard/player_frame.lua" );
@@ -53,7 +52,6 @@ AddCSLuaFile( "buymenu_shipments.lua" );
 AddCSLuaFile( "LmaoLlama/simpleHud.lua" );
 AddCSLuaFile( "sh_teammenu.lua" );
 AddCSLuaFile( "physables.lua" );
-AddCSLuaFile( "language_sh.lua" );
 
 --Falco's prop protection
 local BlockedModelsExist = sql.QueryValue("SELECT COUNT(*) FROM FPP_BLOCKEDMODELS;") ~= false
@@ -146,17 +144,17 @@ function ShowSpare1( ply )
 
 end
 concommand.Add( "gm_spare1", ShowSpare1 );
- 
- function serverHelp( player ) 
- 
+
+ function serverHelp( player )
+
 	if(player:GetNetworkedBool("helpMenu") == false) then
 	player:SetNetworkedBool("helpMenu",true)
 else
 	player:SetNetworkedBool("helpMenu",false)
 end
- 
- end    
- concommand.Add( "serverHelp", serverHelp ) 
+
+ end
+ concommand.Add( "serverHelp", serverHelp )
 
 
  function GM:ShowTeam( ply )
@@ -197,13 +195,13 @@ end
 hook.Add("PlayerInitialSpawn","getTribes",GM.SendTribes)
 
 function CreateTribe( ply, name, red, green, blue, password )
-	
+
 	local Password = false
-	
+
 	if password and password != "" then
 		Password = password
 	end
-		
+
 	GAMEMODE.NumTribes = GAMEMODE.NumTribes + 1
 	GAMEMODE.Tribes[name] = {
 	id = GAMEMODE.NumTribes,
@@ -221,7 +219,7 @@ function CreateTribe( ply, name, red, green, blue, password )
 		umsg.Short(green)
 		umsg.Short(blue)
 	umsg.End()
-	
+
 	team.SetUp(GAMEMODE.NumTribes,tostring(name),Color(red,green,blue,255))
 	ply:SetTeam(GAMEMODE.NumTribes)
 	ply:ChatPrint("Successfully Created A Faction",5,Color(255,255,255,255))
@@ -230,7 +228,7 @@ end
 
 function CreateTribeCmd( ply, cmd, args, argv )
 	if !args[4] or args[4] == "" then
-		ply:ChatPrint("Syntax is: bw_createfaction \"factionname\" red green blue [password(optional)]") return 
+		ply:ChatPrint("Syntax is: bw_createfaction \"factionname\" red green blue [password(optional)]") return
 	end
 	if args[5] and args[5] != "" then
 		CreateTribe( ply, args[1], args[2], args[3], args[4], args[5] )
@@ -243,7 +241,7 @@ concommand.Add( "bw_createfaction", CreateTribeCmd )
 function joinTribe( ply, cmd, args )
 	local pw = ""
 	if !args[1] or args[1] == "" then
-		ply:ChatPrint("Syntax is: bw_join \"faction\" [password(if needed)]") return 
+		ply:ChatPrint("Syntax is: bw_join \"faction\" [password(if needed)]") return
 	end
 	if args[2] and args[2] != "" then
 		pw = args[2]
@@ -275,7 +273,7 @@ end
 hook.Add( "InitPostEntity", "GlassUnbreakable", UnbreakableGlass )
 
 function payall()
-    for k,v in pairs( player.GetAll() ) do 
+    for k,v in pairs( player.GetAll() ) do
         local amount = 1
         if !v:CanAfford(20000) then
             amount = amount + math.random(25,37)
@@ -292,7 +290,7 @@ function payall()
         v:AddMoney( amount )
         if !v:CanAfford(20000) then
             Notify(v, 0, 3,"Payday you made "..amount.." dollars!" );
-        else 
+        else
             Notify(v, 0, 3,"You're rich you get $1 for payday" );
         end
     end

@@ -141,13 +141,13 @@ end
    Name: ENT:SetupDataTables()
    Desc: Setup the data tables.
 ---------------------------------------------------------*/
-function SWEP:SetupDataTables()  
+function SWEP:SetupDataTables()
 
 	self:DTVar("Bool", 0, "Holsted")
 	self:DTVar("Bool", 1, "Ironsights")
 	self:DTVar("Bool", 2, "Scope")
 	self:DTVar("Bool", 3, "Mode")
-end 
+end
 
 /*---------------------------------------------------------
    Name: SWEP:IdleAnimation()
@@ -222,7 +222,7 @@ function SWEP:SecondaryAttack()
 	end
 
 	if (!self.IronSightsPos) or (self.Owner:KeyDown(IN_SPEED) or self.Weapon:GetDTBool(0)) then return end
-	
+
 	// Not pressing Use + Right click? Ironsights
 	bIronsights = !self.Weapon:GetDTBool(1)
 	self:SetIronsights(bIronsights)
@@ -278,7 +278,7 @@ function SWEP:SetIronsights(b)
 
 			if self.AllowPlaybackRate and self.AllowIdleAnimation then
 				self.Owner:GetViewModel():SetPlaybackRate(1)
-			end	
+			end
 
 			self.Weapon:EmitSound("weapons/universal/iron_out.wav")
 		end
@@ -354,7 +354,7 @@ end
 function SWEP:Reload()
 
 	// When the weapon is already doing an animation, just return end because we don't want to interrupt it
-	if (self.ActionDelay > CurTime()) then return end 
+	if (self.ActionDelay > CurTime()) then return end
 
 	// Need to call the default reload before the real reload animation
 	self.Weapon:DefaultReload(ACT_VM_RELOAD)
@@ -384,8 +384,8 @@ end
 
 /*---------------------------------------------------------
    Name: SWEP:SecondThink()
-   Desc: Called every frame. Use this function if you don't 
-	   want to copy/past the think function everytime you 
+   Desc: Called every frame. Use this function if you don't
+	   want to copy/past the think function everytime you
 	   create a new weapon with this base...
 ---------------------------------------------------------*/
 function SWEP:SecondThink()
@@ -413,7 +413,7 @@ function SWEP:Think()
 				self.Owner:GetViewModel():SetPlaybackRate(1)
 			else
 				self.Owner:GetViewModel():SetPlaybackRate(0)
-			end		
+			end
 		end
 
 		self.IdleApply = false
@@ -448,7 +448,7 @@ function SWEP:Think()
 			if self.BurstCounter > 0 then
 				self.BurstCounter = self.BurstCounter - 1
 				self.BurstTimer = CurTime()
-				
+
 				if self:CanPrimaryAttack() then
 					self.Weapon:EmitSound(self.Primary.Sound)
 					self:ShootBulletInformation()
@@ -479,9 +479,9 @@ function SWEP:Deploy()
 
 	self:DeployAnimation()
 
-	if (IsValid(self.Owner) and self.Owner:GetViewModel()) then
-		self:IdleAnimation(self.Owner:GetViewModel():SequenceDuration())
-	end
+	--if (IsValid(self.Owner) and self.Owner:GetViewModel()) then
+	--	self:IdleAnimation(self.Owner:GetViewModel():SequenceDuration())
+	--end
 
 	self.Weapon:SetNextPrimaryFire(CurTime() + self.DeployDelay + 0.05)
 	self.Weapon:SetNextSecondaryFire(CurTime() + self.DeployDelay + 0.05)
@@ -518,19 +518,19 @@ function SWEP:CrosshairAccuracy()
 	if (self.ConstantAccuracy) or (self.Owner:IsNPC()) then
 		return 1.0
 	end
-	
+
 	local LastAccuracy 	= self.LastAccuracy or 0
 	local Accuracy 		= 1.0
 	local LastShoot 		= self.Weapon:GetNetworkedFloat("LastShootTime", 0)
-	
+
 	local Speed 		= self.Owner:GetVelocity():Length()
 
 	local SpeedClamp = math.Clamp(math.abs(Speed / 705), 0, 1)
-	
+
 	if (CurTime() <= LastShoot + self.SprayTime) then
 		Accuracy = Accuracy * self.SprayAccuracy
 	end
-	
+
 	if (not self.Owner:IsOnGround()) then
 		Accuracy = Accuracy * 0.1
 	elseif (Speed > 10) then
@@ -544,7 +544,7 @@ function SWEP:CrosshairAccuracy()
 			Accuracy = math.Approach(self.LastAccuracy, Accuracy, FrameTime() * -2)
 		end
 	end
-	
+
 	self.LastAccuracy = Accuracy
 	return math.Clamp(Accuracy, 0.2, 1)
 end
@@ -644,10 +644,10 @@ function SWEP:ShootEffects()
 	local WeaponModel = self.Weapon:GetOwner():GetActiveWeapon():GetClass()
 
 	if (not self.Owner:IsNPC() and self.Weapon:Clip1() < 1) then
-		timer.Simple(self.Owner:GetViewModel():SequenceDuration(), function() 
+		timer.Simple(self.Owner:GetViewModel():SequenceDuration(), function()
 			if self.Owner and self.Owner:Alive() and self.Weapon:GetOwner():GetActiveWeapon():GetClass() == WeaponModel then
 				self.ActionDelay = CurTime()
-				self:Reload() 
+				self:Reload()
 			end
 		end)
 	end
@@ -725,7 +725,7 @@ function SWEP:ShootEffects()
 
 			ent:Spawn()
 
-			timer.Simple(0.01, ent.SetVelocity, ent, push)               
+			timer.Simple(0.01, ent.SetVelocity, ent, push)
 			timer.Simple(0.01, ent:GetPhysicsObject().ApplyForceCenter, ent:GetPhysicsObject(), push)
 			timer.Simple(25, ResetDoor, trace.Entity, ent)
 		end
@@ -789,8 +789,8 @@ end
 function SWEP:ShootAnimation()
 
 	// Too lazy to create a table :)
-	local AllowDryFire = self.Owner:GetActiveWeapon():GetClass() == ("weapon_mad_deagle") 
-				   or self.Owner:GetActiveWeapon():GetClass() == ("weapon_mad_usp") 
+	local AllowDryFire = self.Owner:GetActiveWeapon():GetClass() == ("weapon_mad_deagle")
+				   or self.Owner:GetActiveWeapon():GetClass() == ("weapon_mad_usp")
 				   or self.Owner:GetActiveWeapon():GetClass() == ("weapon_mad_usp_match")
 
 	if (self.Weapon:Clip1() <= 0) then
@@ -834,7 +834,7 @@ function SWEP:ShootBullet(damage, recoil, num_bullets, aimcone)
 	else
 		TracerName = "Tracer"
 	end
-	
+
 	local bullet = {}
 		bullet.Num 		= num_bullets
 		bullet.Src 		= self.Owner:GetShootPos()			// Source
@@ -844,12 +844,12 @@ function SWEP:ShootBullet(damage, recoil, num_bullets, aimcone)
 		bullet.TracerName = TracerName
 		bullet.Force	= damage * 0.5					// Amount of force to give to phys objects
 		bullet.Damage	= damage
-		bullet.Callback	= function(attacker, tr, dmginfo) 
+		bullet.Callback	= function(attacker, tr, dmginfo)
 						if not self.Owner:IsNPC() and self.Owner:GetNetworkedInt("Fuel") > 0 then
-							self:ShootFire(attacker, tr, dmginfo) 
+							self:ShootFire(attacker, tr, dmginfo)
 						end
 
-						return self:RicochetCallback_Redirect(attacker, tr, dmginfo) 
+						return self:RicochetCallback_Redirect(attacker, tr, dmginfo)
 					  end
 
 	self.Owner:FireBullets(bullet)
@@ -900,28 +900,28 @@ function SWEP:BulletPenetrate(bouncenum, attacker, tr, dmginfo, isplayer)
 
 	// Don't go through more than 3 times
 	if (bouncenum > 3) then return false end
-	
+
 	// Direction (and length) that we are going to penetrate
 	local PenetrationDirection = tr.Normal * MaxPenetration
-	
+
 	if (tr.MatType == MAT_GLASS or tr.MatType == MAT_PLASTIC or tr.MatType == MAT_WOOD or tr.MatType == MAT_FLESH or tr.MatType == MAT_ALIENFLESH) then
 		PenetrationDirection = tr.Normal * (MaxPenetration * 2)
 	end
-		
+
 	local trace 	= {}
 	trace.endpos 	= tr.HitPos
 	trace.start 	= tr.HitPos + PenetrationDirection
 	trace.mask 		= MASK_SHOT
 	trace.filter 	= {self.Owner}
-	   
-	local trace 	= util.TraceLine(trace) 
-	
+
+	local trace 	= util.TraceLine(trace)
+
 	// Bullet didn't penetrate.
 	if (trace.StartSolid or trace.Fraction >= 1.0 or tr.Fraction <= 0.0) then return false end
-	
+
 	// Damage multiplier depending on surface
 	local fDamageMulti = 0.5
-	
+
 	if (tr.MatType == MAT_CONCRETE) then
 		fDamageMulti = 0.3
 	elseif (tr.MatType == MAT_WOOD or tr.MatType == MAT_PLASTIC or tr.MatType == MAT_GLASS) then
@@ -929,13 +929,13 @@ function SWEP:BulletPenetrate(bouncenum, attacker, tr, dmginfo, isplayer)
 	elseif (tr.MatType == MAT_FLESH or tr.MatType == MAT_ALIENFLESH) then
 		fDamageMulti = 0.9
 	end
-		
+
 	// Fire bullet from the exit point using the original trajectory
-	local bullet = 
-	{	
+	local bullet =
+	{
 		Num 		= 1,
 		Src 		= trace.HitPos,
-		Dir 		= tr.Normal,	
+		Dir 		= tr.Normal,
 		Spread 	= Vector(0, 0, 0),
 		Tracer	= 1,
 		TracerName 	= "effect_mad_penetration_trace",
@@ -943,9 +943,9 @@ function SWEP:BulletPenetrate(bouncenum, attacker, tr, dmginfo, isplayer)
 		Damage	= (dmginfo:GetDamage() * fDamageMulti),
 		HullSize	= 2
 	}
-	
+
 	bullet.Callback   = function(a, b, c) if (self.Ricochet) then return self:RicochetCallback(bouncenum + 1, a, b, c) end end
-	
+
 	timer.Simple(0.05, function()
 		if not IsFirstTimePredicted() then return end
 		attacker.FireBullets(attacker, bullet, true)
@@ -965,12 +965,12 @@ function SWEP:RicochetCallback(bouncenum, attacker, tr, dmginfo)
 
 	local DoDefaultEffect = true
 	if (tr.HitSky) then return end
-	
+
 	// Can we go through whatever we hit?
 	if (self.Penetration) and (self:BulletPenetrate(bouncenum, attacker, tr, dmginfo)) then
 		return {damage = true, effects = DoDefaultEffect}
 	end
-	
+
 	// Your screen will shake and you'll hear the savage hiss of an approaching bullet which passing if someone is shooting at you.
 	if (tr.MatType != MAT_METAL) then
 		if (SERVER) then
@@ -992,13 +992,13 @@ function SWEP:RicochetCallback(bouncenum, attacker, tr, dmginfo)
 			util.Effect("StunstickImpact", effectdata)
 		end
 
-		return 
+		return
 	end
 
 	if (self.Ricochet == false) then return {damage = true, effects = DoDefaultEffect} end
-	
+
 	if (bouncenum > self.MaxRicochet) then return end
-	
+
 	// Bounce vector
 	local trace = {}
 	trace.start = tr.HitPos
@@ -1006,10 +1006,10 @@ function SWEP:RicochetCallback(bouncenum, attacker, tr, dmginfo)
 
 	local trace = util.TraceLine(trace)
 
- 	local DotProduct = tr.HitNormal:Dot(tr.Normal * -1) 
-	
-	local bullet = 
-	{	
+ 	local DotProduct = tr.HitNormal:Dot(tr.Normal * -1)
+
+	local bullet =
+	{
 		Num 		= 1,
 		Src 		= tr.HitPos + (tr.HitNormal * 5),
 		Dir 		= ((2 * tr.HitNormal * DotProduct) + tr.Normal) + (VectorRand() * 0.05),
@@ -1020,7 +1020,7 @@ function SWEP:RicochetCallback(bouncenum, attacker, tr, dmginfo)
 		Damage	= dmginfo:GetDamage() * 0.5,
 		HullSize	= 2
 	}
-		
+
 	// Added conditional to stop errors when bullets ricochet after weapon switch
 	bullet.Callback  	= function(a, b, c) if (self.Ricochet) then return self:RicochetCallback(bouncenum + 1, a, b, c) end end
 
@@ -1028,7 +1028,7 @@ function SWEP:RicochetCallback(bouncenum, attacker, tr, dmginfo)
 		if not IsFirstTimePredicted() then return end
 		attacker.FireBullets(attacker, bullet, true)
 	end)
-	
+
 	return {damage = true, effects = DoDefaultEffect}
 end
 
@@ -1036,8 +1036,8 @@ end
    Name: SWEP:RicochetCallback_Redirect()
 ---------------------------------------------------------*/
 function SWEP:RicochetCallback_Redirect(a, b, c)
- 
-	return self:RicochetCallback(0, a, b, c) 
+
+	return self:RicochetCallback(0, a, b, c)
 end
 
 /*---------------------------------------------------------
