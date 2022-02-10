@@ -413,15 +413,15 @@ style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'>&nbsp;</span></
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><b><span
 style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'>/buygunrecycler</span></b><span
 style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'>&nbsp;&nbsp;&nbsp;
-<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">300&nbsp;     Buys a gun recycler that gives you half of the value back of
+<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">300&nbsp; Â Â Â  Buys a gun recycler that gives you half of the value back of
 inserted guns.</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><span
 style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'><br>
 <b>/buylamp </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">300&nbsp;     Buys a lamp to light up dark bases.<br>
-<b>/buyspotlight</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">300&nbsp;     Buys a spotlight
+<IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">300&nbsp; Â Â Â  Buys a lamp to light up dark bases.<br>
+<b>/buyspotlight</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <IMG src="http://i123.photobucket.com/albums/o290/jacobthebrown/money_dollar.png">300&nbsp; Â Â Â  Buys a spotlight
 to light up dark bases.</span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
@@ -572,7 +572,7 @@ random<br>
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><span
 style='font-size:10.0pt;font-family:"Courier New";color:#C9C9C9'>&nbsp; -You
 cannot take other drugs with a superdrug, you will overdose.<br>
-<b>ÜberDrug&nbsp;&nbsp;&nbsp;</b></span></p>
+<b>ÃœberDrug&nbsp;&nbsp;&nbsp;</b></span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:.3in;margin-bottom:0in;
 margin-left:.1in;margin-bottom:.0001pt;line-height:normal'><b><span
@@ -585,7 +585,7 @@ godmode<br>
 <br>
 If you try to take too many of the special drug effects, there is an increasing
 chance of having an overdose, which poisons and kills you. Trying to take all
-15 at once is basically asking for it. SuperDrugs (and ÜberDrugs) are the only
+15 at once is basically asking for it. SuperDrugs (and ÃœberDrugs) are the only
 safe way to get all the effects at the same time.</span></p>
 
 </div>
@@ -642,8 +642,8 @@ RULES[5] =	{
 				"Prop Spamming",
 				"- Don't spam items to cause lag. Period. Will earn an instant permaban.",
 				"- This includes any kind of spam. Prop, Rope, vehicle and whatever else you may think of.",
-				"- Server Logs are reviewed and just because an admin is not on the server does not mean you won’t be banned.",
-				"- Admins see props in console, just because they aren't near you doesn't mean they can’t see the spam.",
+				"- Server Logs are reviewed and just because an admin is not on the server does not mean you wonÂ’t be banned.",
+				"- Admins see props in console, just because they aren't near you doesn't mean they canÂ’t see the spam.",
 				"  Be Careful, and publicly note when you accidentally spawn too many props as an admin may ban you on accident.",
 			}
 RULES[6] =	{
@@ -658,7 +658,7 @@ RULES[6] =	{
 RULES[7] =	{
 				"Prop Pushing",
 				"- If you use the physics gun to hit someone with a prop, you will be kicked or banned.",
-				"- If you accidentally knock someone around or bump someone, simply say you’re sorry."
+				"- If you accidentally knock someone around or bump someone, simply say youÂ’re sorry."
 			}						
 RULES[8] =	{
 				"Weld Blocking",
@@ -687,7 +687,7 @@ RULES[10] =  {
 			}
 RULES[11] =  {
 				"Racism",
-				"We do not take Racism as an insult./n But do not use racism to whom offends white people who don't like the would nigger."
+				"- Don't be racist, duh."
 			}
 RULES[12] =  {
 				"Mic Spam",
