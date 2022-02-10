@@ -904,12 +904,3 @@ function GM:PlayerSpawnedMagnet( ply, model, ent )
 	ply:AddCount( "magnets", ent )
 	
 end
-
---function SpawnedProp(ply, model, ent)
---print("nigger spawned")
---		timer.Create( "propfreeze", 1, 1, function()
---		local phys = ent:GetPhysicsObject()
---			phys:EnableMotion(false)
---		end )
---end
---hook.Add("PlayerSpawnedProp", "playerSpawnedProp", SpawnedProp)
